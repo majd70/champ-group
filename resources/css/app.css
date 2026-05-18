@@ -6,6 +6,54 @@
 @source '../**/*.js';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --color-bg-navy: #0A1330;
+    --color-panel-olive: #343027;
+    --color-surface-navy: #15224A;
+    --color-divider: #26314F;
+    --color-accent-gold: #F4B81E;
+    --color-display-cream: #EFE7D2;
+    --color-text-muted: #A8B0C2;
+    --color-text-dim: #6B7592;
+
+    --font-display: 'Anton', 'Bebas Neue', ui-sans-serif, system-ui, sans-serif;
+    --font-italic: 'DM Serif Display', ui-serif, Georgia, serif;
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+    html {
+        background-color: var(--color-bg-navy);
+        color: var(--color-text-muted);
+        font-family: var(--font-sans);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+@utility text-eyebrow {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 0.6875rem;
+    line-height: 1.4;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+@utility text-display-xxl {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(72px, 12vw, 200px);
+    line-height: 0.88;
+    text-transform: uppercase;
+}
+
+@utility text-stat-number {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(32px, 3.4vw, 56px);
+    line-height: 1;
+}
+
+@utility tabular-nums {
+    font-variant-numeric: tabular-nums;
 }
