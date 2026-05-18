@@ -54,7 +54,7 @@
         </div>
 
         {{-- RIGHT COLUMN --}}
-        <div class="flex flex-col gap-10 lg:gap-0 lg:border-l lg:border-[var(--color-divider)] lg:pl-12">
+        <div class="flex flex-col gap-10 lg:gap-0 lg:border-l lg:border-[var(--color-divider)] lg:pl-12 lg:pt-20">
 
             {{-- 6-stat grid --}}
             @php

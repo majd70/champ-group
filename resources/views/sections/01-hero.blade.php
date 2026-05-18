@@ -1,9 +1,9 @@
 <section
     id="page-01"
-    class="relative w-full bg-[var(--color-bg-navy)]"
+    class="relative w-full overflow-hidden bg-[var(--color-bg-navy)]"
     aria-labelledby="hero-title"
 >
-    <div class="mx-auto flex min-h-screen max-w-[1440px] flex-col px-6 py-10 md:px-12 md:py-12 lg:py-14">
+    <div class="relative mx-auto flex min-h-screen max-w-[1440px] flex-col px-6 py-10 md:px-12 md:py-12 lg:py-14">
 
         {{-- top eyebrow --}}
         <div class="flex items-center gap-3 pb-1">
@@ -57,8 +57,9 @@
                 </dl>
             </div>
 
-            {{-- RIGHT: olive panel with shield + vertical rail --}}
-            <div class="relative flex items-center justify-center overflow-hidden bg-[var(--color-panel-olive)] py-16 lg:py-0">
+            {{-- RIGHT: shield + vertical rail. Negative top/bottom margins on lg
+                 extend the olive bg vertically without changing horizontal width --}}
+            <div class="relative flex items-center justify-center bg-[var(--color-panel-olive)] py-16 lg:-my-[160px] lg:py-[160px]">
 
                 {{-- faint concentric ring guides, gold tinted --}}
                 <div
