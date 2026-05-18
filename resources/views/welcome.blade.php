@@ -12,4 +12,6 @@
     @include('sections.06-academy')
     @include('sections.07-press-collage')
     @include('sections.08-club')
+    @include('sections.09-events-collage')
+    @include('sections.10-jalaa')
 @endsection
