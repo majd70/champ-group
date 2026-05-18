@@ -9,4 +9,7 @@
     @include('sections.03-services')
     @include('sections.04-hub')
     @include('sections.05-lms')
+    @include('sections.06-academy')
+    @include('sections.07-press-collage')
+    @include('sections.08-club')
 @endsection
