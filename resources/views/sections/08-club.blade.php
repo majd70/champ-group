@@ -86,14 +86,30 @@
             <div class="mt-10 flex flex-col gap-10 lg:mt-auto lg:pt-12">
                 <div class="flex flex-col gap-5">
                     <x-eyebrow tone="dim">Partnerships · 40+ Network</x-eyebrow>
-                    <img
-                        src="{{ asset('images/page-08/partners.png') }}"
-                        alt="Champions Club 40+ partner network: Pepsi, UNRWA, Paltel, Joul, Quds Bank, ATC, Bank of Palestine, UNDP, GIZ, Oxfam, ICRC, Ooredoo, and more"
-                        width="1295"
-                        height="320"
-                        class="block w-full select-none"
-                        draggable="false"
-                    >
+                    @php
+                        $clubPartners = [
+                            'Pepsi',
+                            'UNRWA',
+                            'Paltel',
+                            'Joul',
+                            'Quds Bank',
+                            'ATC',
+                            'Bank of Palestine',
+                            'UNDP',
+                            'GIZ',
+                            'Oxfam',
+                            'ICRC',
+                            'Ooredoo',
+                        ];
+                    @endphp
+                    <div class="grid grid-cols-3 gap-2.5 sm:grid-cols-4 md:grid-cols-6">
+                        @foreach ($clubPartners as $partner)
+                            <x-logo-card name="{{ $partner }}" />
+                        @endforeach
+                    </div>
+                    <span class="self-end text-[clamp(12px,1vw,16px)] leading-[1.3] text-[var(--color-accent-gold)]" style="font-family: var(--font-italic); font-style: italic;">
+                        +40&nbsp;More Partners
+                    </span>
                 </div>
 
                 <x-page-footer index="08" total="12" label="Club · Family Sanctuary" />

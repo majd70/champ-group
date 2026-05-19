@@ -30,17 +30,75 @@
             </div>
         </div>
 
-        {{-- partner grid: cropped as a single image from page-02.png
-             (tier labels, 23 logo cells, and "+40 More Partners" text are all
-             baked into this crop so the grid renders pixel-identical to source) --}}
-        <img
-            src="{{ asset('images/page-02/partner-grid.png') }}"
-            alt="Champions Group partner network: International, Regional, and Local tiers — 23 logos across FC Barcelona, Metrica Sports, Barça Innovation Hub, Real Madrid Football Program, AC Football Center, Eskono, Donosti Cup, WOSPAC, RSM, Nafess.com, Q.SL, Al Ain FC, Al Nasr SC, Shabab Al-Ahli Dubai, Talent, Pepsi, UNRWA, UNDP, Ooredoo, Paltel, Bank of Palestine, Joul, plus 40 more"
-            width="2860"
-            height="700"
-            class="block w-full select-none"
-            draggable="false"
-        >
+        {{-- partner grid: 3 rows × 8 columns of empty logo cards (dashboard-ready) --}}
+        @php
+            $tiers = [
+                [
+                    'label' => 'International',
+                    'logos' => [
+                        'FC Barcelona',
+                        'Metrica Sports',
+                        'Barça Innovation Hub',
+                        'Real Madrid Football Program',
+                        'AC Football Center',
+                        'Eskono',
+                        'Donosti Cup',
+                        'WOSPAC',
+                    ],
+                ],
+                [
+                    'label' => 'Regional',
+                    'logos' => [
+                        'RSM Regional Sports Management',
+                        'Nafess.com',
+                        'Regional Federation',
+                        'Q.SL Qatar Stars League',
+                        'Al Ain FC',
+                        'Al Nasr SC',
+                        'Shabab Al-Ahli Dubai',
+                        'Talent',
+                    ],
+                ],
+                [
+                    'label' => 'Local',
+                    'logos' => [
+                        'Pepsi',
+                        'UNRWA',
+                        'UNDP',
+                        'Ooredoo',
+                        'Paltel',
+                        'Bank of Palestine',
+                        'Joul',
+                    ],
+                    'more_text' => '+40 More Partners',
+                ],
+            ];
+        @endphp
+
+        <div class="flex flex-col gap-3">
+            @foreach ($tiers as $tier)
+                <div class="flex w-full items-center gap-4">
+                    {{-- Tier label --}}
+                    <div class="flex w-[110px] shrink-0 flex-col gap-1 md:w-[140px]">
+                        <x-eyebrow tone="gold">{{ $tier['label'] }}</x-eyebrow>
+                        <span class="text-[clamp(20px,2vw,30px)] uppercase leading-none text-white" style="font-family: var(--font-display);">Partners</span>
+                    </div>
+
+                    {{-- 8-column card grid --}}
+                    <div class="grid min-w-0 flex-1 grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-8 lg:gap-3">
+                        @foreach ($tier['logos'] as $logoName)
+                            <x-logo-card name="{{ $logoName }}" />
+                        @endforeach
+
+                        @if (!empty($tier['more_text']))
+                            <div class="flex aspect-[16/9] items-center justify-center px-2 text-center text-[clamp(11px,0.95vw,15px)] leading-[1.3] text-[var(--color-accent-gold)]" style="font-family: var(--font-italic); font-style: italic;">
+                                {{ $tier['more_text'] }}
+                            </div>
+                        @endif
+                    </div>
+                </div>
+            @endforeach
+        </div>
 
         {{-- footer --}}
         <x-page-footer index="02" total="12" label="Champions Group · Partnerships" />

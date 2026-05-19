@@ -93,17 +93,23 @@
                     @endforeach
                 </div>
 
-                {{-- partner logos (cropped) — flush left with "Partnerships" eyebrow above --}}
+                {{-- partnerships row: 5 empty logo cards (dashboard-ready) --}}
                 <div class="flex flex-col gap-4">
                     <x-eyebrow tone="dim">Partnerships</x-eyebrow>
-                    <img
-                        src="{{ asset('images/page-04/partners.png') }}"
-                        alt="Champions Hub partners: Barça Innovation Hub, AC Football Center, Eskono, Metrica Sports, Nafess.com"
-                        width="970"
-                        height="370"
-                        class="block w-[78%] select-none"
-                        draggable="false"
-                    >
+                    @php
+                        $hubPartners = [
+                            'Barça Innovation Hub',
+                            'AC Football Center',
+                            'Eskono',
+                            'Metrica Sports',
+                            'Nafess.com',
+                        ];
+                    @endphp
+                    <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5">
+                        @foreach ($hubPartners as $partner)
+                            <x-logo-card name="{{ $partner }}" />
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>

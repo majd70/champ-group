@@ -84,14 +84,20 @@
             <div class="mt-10 flex flex-col gap-10 lg:mt-auto lg:pt-12">
                 <div class="flex flex-col gap-5">
                     <x-eyebrow tone="dim">Partnerships</x-eyebrow>
-                    <img
-                        src="{{ asset('images/page-06/partners.png') }}"
-                        alt="Champions Academy partnerships: Real Madrid Football Program, Donosti Cup, WOSPAC, Nafess.com, RSM Regional Sports Management"
-                        width="1260"
-                        height="130"
-                        class="block w-full select-none"
-                        draggable="false"
-                    >
+                    @php
+                        $academyPartners = [
+                            'Real Madrid Football Program',
+                            'Donosti Cup',
+                            'WOSPAC',
+                            'Nafess.com',
+                            'RSM Regional Sports Management',
+                        ];
+                    @endphp
+                    <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5">
+                        @foreach ($academyPartners as $partner)
+                            <x-logo-card name="{{ $partner }}" />
+                        @endforeach
+                    </div>
                 </div>
 
                 <x-page-footer index="06" total="12" label="Academy · 9 Sports" />
