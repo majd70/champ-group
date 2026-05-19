@@ -83,7 +83,7 @@
                     @endphp
                     @foreach ($stats as $stat)
                         <div class="flex flex-col gap-2">
-                            <span class="text-[clamp(28px,3.2vw,52px)] uppercase leading-none text-[var(--color-accent-gold)]" style="font-family: var(--font-display);">{{ $stat['number'] }}</span>
+                            <span class="stat-counter text-[clamp(28px,3.2vw,52px)] uppercase leading-none text-[var(--color-accent-gold)]" style="font-family: var(--font-display);">{{ $stat['number'] }}</span>
                             <span class="text-[12px] leading-[1.4] text-white md:text-[13px]">{{ $stat['label'] }}</span>
                             <x-eyebrow tone="dim">{{ $stat['caption'] }}</x-eyebrow>
                         </div>

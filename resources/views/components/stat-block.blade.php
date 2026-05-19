@@ -6,7 +6,7 @@
 
 <div {{ $attributes->class(['flex flex-col gap-3']) }}>
     <div class="flex items-start gap-0.5 text-[var(--color-accent-gold)] tabular-nums">
-        <span class="text-stat-number leading-none">{{ $number }}</span>
+        <span class="stat-counter text-stat-number leading-none">{{ $number }}</span>
         @if ($unit)
             <span class="mt-2 text-[0.55em] font-display uppercase tracking-wider text-[var(--color-accent-gold)]">{{ $unit }}</span>
         @endif

@@ -52,7 +52,7 @@
         <div class="grid grid-cols-1 gap-y-8 sm:grid-cols-2 md:grid-cols-3 md:gap-x-12 md:gap-y-10">
             @foreach ($stats as $i => $stat)
                 <div class="flex flex-col gap-3 {{ $i >= 3 ? 'md:border-t md:border-[var(--color-divider)] md:pt-10' : '' }}">
-                    <span class="text-[clamp(40px,4.8vw,80px)] leading-none tabular-nums text-[var(--color-accent-gold)]" style="font-family: var(--font-display);">{{ $stat['number'] }}</span>
+                    <span class="stat-counter text-[clamp(40px,4.8vw,80px)] leading-none tabular-nums text-[var(--color-accent-gold)]" style="font-family: var(--font-display);">{{ $stat['number'] }}</span>
                     <span class="text-[13px] leading-[1.4] text-white md:text-[14px]">{{ $stat['label'] }}</span>
                     <x-eyebrow tone="dim">{{ $stat['caption'] }}</x-eyebrow>
                 </div>

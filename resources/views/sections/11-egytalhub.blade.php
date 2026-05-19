@@ -31,7 +31,7 @@
                     style="writing-mode: vertical-rl; transform: rotate(180deg);"
                 >Track Record</span>
                 <div class="flex flex-col gap-3">
-                    <span class="text-[clamp(64px,10vw,160px)] leading-[0.9] tabular-nums text-[var(--color-accent-gold)]" style="font-family: var(--font-display);">53+</span>
+                    <span class="stat-counter text-[clamp(64px,10vw,160px)] leading-[0.9] tabular-nums text-[var(--color-accent-gold)]" style="font-family: var(--font-display);">53+</span>
                     <x-eyebrow tone="dim">Projects Delivered Since Aug 2025 · 95% Client Satisfaction</x-eyebrow>
                 </div>
             </div>
@@ -72,7 +72,7 @@
                 <div class="grid grid-cols-3 gap-x-4 gap-y-6 md:gap-x-6 md:gap-y-8">
                     @foreach ($stats as $i => $stat)
                         <div class="flex flex-col gap-2 {{ $i >= 3 ? 'md:border-t md:border-[var(--color-divider)] md:pt-6' : '' }}">
-                            <span class="text-[clamp(28px,3.4vw,52px)] leading-none tabular-nums" style="font-family: var(--font-display); color: var(--color-accent-gold);">{{ $stat['number'] }}</span>
+                            <span class="stat-counter text-[clamp(28px,3.4vw,52px)] leading-none tabular-nums" style="font-family: var(--font-display); color: var(--color-accent-gold);">{{ $stat['number'] }}</span>
                             <span class="text-[12px] leading-[1.4] text-white md:text-[13px]">{{ $stat['label'] }}</span>
                             <x-eyebrow tone="dim">{{ $stat['caption'] }}</x-eyebrow>
                         </div>
