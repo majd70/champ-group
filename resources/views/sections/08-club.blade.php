@@ -32,6 +32,9 @@
                 A 24,000 m² sanctuary founded in 2018 as the first family club of its kind in Palestine — offering diverse activities spanning sports, social, and cultural engagement, with fully digitized operations. The club was completely destroyed in the October 2023 war.
             </p>
 
+            {{-- CTA --}}
+            <x-visit-button />
+
             {{-- horizontal divider --}}
             <hr class="border-0 border-t border-[var(--color-divider)]">
 

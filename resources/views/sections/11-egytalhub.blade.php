@@ -21,6 +21,9 @@
                 Long-Distance services connecting global companies with top talent — Staff Augmentation and IT Project-Based Solutions across Web &amp; Mobile, UX/UI, Cloud, QA, Software, Engineering, Creative, Digital Marketing, BPO and more.
             </p>
 
+            {{-- CTA --}}
+            <x-visit-button />
+
             {{-- horizontal divider --}}
             <hr class="border-0 border-t border-[var(--color-divider)]">
 

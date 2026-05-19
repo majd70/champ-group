@@ -230,6 +230,38 @@
     });
 
     // =====================================================================
+    // CTA BUTTONS — fade-up on scroll with a slight delay
+    // =====================================================================
+    document.querySelectorAll('.visit-button').forEach(function (btn) {
+        // Skip the hero button — it's part of the hero timeline above
+        if (btn.closest('#page-01')) return;
+        gsap.from(btn, {
+            opacity: 0,
+            y: 20,
+            duration: 0.7,
+            ease: 'power3.out',
+            delay: 0.2,
+            scrollTrigger: {
+                trigger: btn,
+                start: 'top 88%',
+                toggleActions: 'play none none reverse',
+            },
+        });
+    });
+
+    // For the hero CTA, fade it in late in the hero timeline
+    const heroBtn = document.querySelector('#page-01 .visit-button');
+    if (heroBtn) {
+        gsap.from(heroBtn, {
+            opacity: 0,
+            y: 20,
+            duration: 0.7,
+            ease: 'power3.out',
+            delay: 1.0,
+        });
+    }
+
+    // =====================================================================
     // FOOTER — stagger columns and social icons
     // =====================================================================
     const footer = document.getElementById('footer');

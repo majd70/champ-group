@@ -31,10 +31,11 @@
                 <x-eyebrow tone="dim">Features</x-eyebrow>
                 <h3 class="text-[clamp(20px,1.8vw,28px)] uppercase leading-[1.1] text-[var(--color-display-cream)]" style="font-family: var(--font-display);">Built for every learner.</h3>
             </div>
-            <div class="lg:flex lg:justify-end">
+            <div class="lg:flex lg:flex-col lg:items-end lg:gap-5">
                 <p class="max-w-[42ch] text-[14px] leading-[1.7] text-[var(--color-text-muted)] md:text-[15px]">
                     A complete multi-tenant learning platform — combining AI-powered mentoring, interactive learning, advanced gamification, live streaming and full white-label branding for training teams, course creators, coaches and enterprise.
                 </p>
+                <x-visit-button class="mt-5 lg:mt-0" />
             </div>
         </div>
 

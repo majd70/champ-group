@@ -27,10 +27,13 @@
                     <span class="js-hero-title-line text-display-xxl -mt-2 text-[var(--color-accent-gold)] md:-mt-4">Group</span>
                 </h1>
 
-                {{-- body paragraph --}}
-                <p class="js-hero-desc max-w-[52ch] text-[14px] leading-[1.75] text-[var(--color-text-muted)] md:text-[15px]">
-                    A diversified sports ecosystem advancing the sports sector in MENA since 2015 — combining education, technology, consultation, events, and community sports services through our integrated divisions.
-                </p>
+                {{-- body paragraph + CTA --}}
+                <div class="flex flex-col gap-6">
+                    <p class="js-hero-desc max-w-[52ch] text-[14px] leading-[1.75] text-[var(--color-text-muted)] md:text-[15px]">
+                        A diversified sports ecosystem advancing the sports sector in MENA since 2015 — combining education, technology, consultation, events, and community sports services through our integrated divisions.
+                    </p>
+                    <x-visit-button />
+                </div>
 
                 {{-- stats row --}}
                 <dl class="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 md:grid-cols-5 md:gap-x-8">

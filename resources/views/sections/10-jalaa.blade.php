@@ -54,6 +54,9 @@
             <p class="text-[13px] leading-[1.5] text-[var(--color-text-muted)] md:text-[14px]">
                 <span class="text-[var(--color-display-cream)]">Ambitions:</span> Win the Palestinian league and compete internationally.
             </p>
+
+            {{-- CTA --}}
+            <x-visit-button />
         </div>
 
         {{-- RIGHT COLUMN --}}

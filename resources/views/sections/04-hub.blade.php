@@ -35,6 +35,9 @@
                     A new era of all-in-one sports development — bringing education and technology together from grassroots to professional level, uniting partner courses, certification, performance analysis, and digital services.
                 </p>
 
+                {{-- CTA --}}
+                <x-visit-button />
+
                 {{-- horizontal rule --}}
                 <hr class="border-0 border-t border-[var(--color-divider)]">
 

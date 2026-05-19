@@ -32,6 +32,9 @@
                 Cultivating educated generations to compete internationally across nine sports academies including football, basketball, tennis, swimming, karate, and more.
             </p>
 
+            {{-- CTA --}}
+            <x-visit-button />
+
             {{-- horizontal divider --}}
             <hr class="border-0 border-t border-[var(--color-divider)]">
 

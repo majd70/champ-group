@@ -26,6 +26,7 @@
                 <p class="max-w-[44ch] text-[14px] leading-[1.7] text-[var(--color-text-muted)] md:text-[15px]">
                     A decade of partnerships across institutions, federations, brands, and global enterprises — anchoring every division of Champions Group.
                 </p>
+                <x-visit-button class="mt-2" />
             </div>
         </div>
 
