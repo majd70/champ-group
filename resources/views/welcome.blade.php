@@ -15,5 +15,4 @@
     @include('sections.09-events-collage')
     @include('sections.10-jalaa')
     @include('sections.11-egytalhub')
-    @include('sections.12-thank-you')
 @endsection

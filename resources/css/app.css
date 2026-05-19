@@ -28,6 +28,11 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
+
+    /* offset anchor jumps so the section isn't hidden behind the fixed navbar */
+    section[id^="page-"] {
+        scroll-margin-top: 72px;
+    }
 }
 
 @utility text-eyebrow {

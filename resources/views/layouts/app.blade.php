@@ -13,8 +13,10 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-[var(--color-bg-navy)] text-[var(--color-text-muted)] antialiased">
-    <main>
+    <x-navbar />
+    <main class="pt-[60px] md:pt-[72px]">
         @yield('content')
     </main>
+    <x-footer />
 </body>
 </html>
