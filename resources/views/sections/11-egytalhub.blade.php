@@ -9,7 +9,7 @@
         <div class="flex flex-col gap-10">
 
             {{-- top eyebrow --}}
-            <x-eyebrow tone="dim">Champions Group · Talent &amp; LD Services</x-eyebrow>
+            <x-eyebrow tone="dim">{{ __('sections.egytal_eyebrow') }}</x-eyebrow>
 
             {{-- title (no italic prefix on this page) --}}
             <h2 id="egytalhub-title" class="text-[clamp(56px,8.5vw,150px)] uppercase leading-[0.88] text-[var(--color-display-cream)]" style="font-family: var(--font-display);">
@@ -18,7 +18,7 @@
 
             {{-- description --}}
             <p class="max-w-[50ch] text-[14px] leading-[1.7] text-[var(--color-text-muted)] md:text-[15px]">
-                Long-Distance services connecting global companies with top talent — Staff Augmentation and IT Project-Based Solutions across Web &amp; Mobile, UX/UI, Cloud, QA, Software, Engineering, Creative, Digital Marketing, BPO and more.
+                {{ __('sections.egytal_description') }}
             </p>
 
             {{-- CTA --}}
@@ -32,16 +32,16 @@
                 <span
                     class="text-eyebrow shrink-0 text-[var(--color-text-dim)] whitespace-nowrap"
                     style="writing-mode: vertical-rl; transform: rotate(180deg);"
-                >Track Record</span>
+                >{{ __('sections.track_record') }}</span>
                 <div class="flex flex-col gap-3">
                     <span class="stat-counter text-[clamp(64px,10vw,160px)] leading-[0.9] tabular-nums text-[var(--color-accent-gold)]" style="font-family: var(--font-display);">53+</span>
-                    <x-eyebrow tone="dim">Projects Delivered Since Aug 2025 · 95% Client Satisfaction</x-eyebrow>
+                    <x-eyebrow tone="dim">{{ __('sections.projects_delivered') }}</x-eyebrow>
                 </div>
             </div>
 
             {{-- tagline --}}
             <p class="text-[13px] leading-[1.5] text-[var(--color-text-muted)] md:text-[14px]">
-                From recruitment to performance reporting — Egypt&rsquo;s talent, delivered.
+                {{ __('sections.egytal_tagline') }}
             </p>
         </div>
 

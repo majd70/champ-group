@@ -6,7 +6,7 @@
     <div class="mx-auto flex max-w-[1440px] flex-col gap-12 px-6 py-20 md:px-12 md:py-24 lg:py-28">
 
         {{-- top eyebrow --}}
-        <x-eyebrow tone="gold">Champions Group · Learning Platform</x-eyebrow>
+        <x-eyebrow tone="gold">{{ __('sections.learning_platform') }}</x-eyebrow>
 
         {{-- top zone: title (left) + laptops (right) --}}
         <div class="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1fr_2.3fr] lg:gap-8">
@@ -28,12 +28,12 @@
         {{-- middle: features label (left) + description (right-aligned, narrow) --}}
         <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start lg:gap-12">
             <div class="flex flex-col gap-4">
-                <x-eyebrow tone="dim">Features</x-eyebrow>
-                <h3 class="text-[clamp(20px,1.8vw,28px)] uppercase leading-[1.1] text-[var(--color-display-cream)]" style="font-family: var(--font-display);">Built for every learner.</h3>
+                <x-eyebrow tone="dim">{{ __('sections.features') }}</x-eyebrow>
+                <h3 class="text-[clamp(20px,1.8vw,28px)] uppercase leading-[1.1] text-[var(--color-display-cream)]" style="font-family: var(--font-display);">{{ __('sections.built_for_every') }}</h3>
             </div>
             <div class="lg:flex lg:flex-col lg:items-end lg:gap-5">
                 <p class="max-w-[42ch] text-[14px] leading-[1.7] text-[var(--color-text-muted)] md:text-[15px]">
-                    A complete multi-tenant learning platform — combining AI-powered mentoring, interactive learning, advanced gamification, live streaming and full white-label branding for training teams, course creators, coaches and enterprise.
+                    {{ __('sections.lms_description') }}
                 </p>
                 <x-visit-button class="mt-5 lg:mt-0" />
             </div>

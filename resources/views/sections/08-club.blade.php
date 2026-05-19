@@ -9,7 +9,7 @@
         <div class="flex flex-col gap-10">
 
             {{-- top eyebrow --}}
-            <x-eyebrow tone="dim">Champions Group · 2018 · 2023</x-eyebrow>
+            <x-eyebrow tone="dim">{{ __('sections.club_eyebrow') }}</x-eyebrow>
 
             {{-- title row: Champions CLUB + shield, shield pushed to far right --}}
             <div class="flex items-center gap-6">
@@ -29,7 +29,7 @@
 
             {{-- description --}}
             <p class="max-w-[55ch] text-[14px] leading-[1.7] text-[var(--color-text-muted)] md:text-[15px]">
-                A 24,000 m² sanctuary founded in 2018 as the first family club of its kind in Palestine — offering diverse activities spanning sports, social, and cultural engagement, with fully digitized operations. The club was completely destroyed in the October 2023 war.
+                {{ __('sections.club_description') }}
             </p>
 
             {{-- CTA --}}
@@ -43,16 +43,16 @@
                 <span
                     class="text-eyebrow shrink-0 text-[var(--color-text-dim)] whitespace-nowrap"
                     style="writing-mode: vertical-rl; transform: rotate(180deg);"
-                >Facility Scale</span>
+                >{{ __('sections.facility_scale') }}</span>
                 <div class="flex flex-col gap-3">
                     <span class="stat-counter text-[clamp(64px,10vw,160px)] leading-[0.9] tabular-nums text-[var(--color-accent-gold)]" style="font-family: var(--font-display);">24,000</span>
-                    <x-eyebrow tone="dim">Square Meters · Multi-Purpose Family Campus</x-eyebrow>
+                    <x-eyebrow tone="dim">{{ __('sections.sq_meters_campus') }}</x-eyebrow>
                 </div>
             </div>
 
             {{-- extra info --}}
             <p class="text-[13px] leading-[1.5] text-[var(--color-text-muted)] md:text-[14px]">
-                Plus +20 commercial exhibitions hosted on-site annually.
+                {{ __('sections.club_extra') }}
             </p>
         </div>
 
@@ -85,7 +85,7 @@
             {{-- partnerships + footer pushed to bottom --}}
             <div class="mt-10 flex flex-col gap-10 lg:mt-auto lg:pt-12">
                 <div class="flex flex-col gap-5">
-                    <x-eyebrow tone="dim">Partnerships · 40+ Network</x-eyebrow>
+                    <x-eyebrow tone="dim">{{ __('sections.partnerships_network') }}</x-eyebrow>
                     @php
                         $clubPartners = [
                             'Pepsi',
@@ -108,7 +108,7 @@
                         @endforeach
                     </div>
                     <span class="self-end text-[clamp(12px,1vw,16px)] leading-[1.3] text-[var(--color-accent-gold)]" style="font-family: var(--font-italic); font-style: italic;">
-                        +40&nbsp;More Partners
+                        {{ __('sections.more_partners') }}
                     </span>
                 </div>
 

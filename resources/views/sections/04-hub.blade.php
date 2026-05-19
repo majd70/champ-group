@@ -6,7 +6,7 @@
     <div class="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-20 md:px-12 md:py-24 lg:py-28">
 
         {{-- top eyebrow --}}
-        <x-eyebrow tone="dim">Champions Group · Integrated Platform</x-eyebrow>
+        <x-eyebrow tone="dim">{{ __('sections.integrated_platform') }}</x-eyebrow>
 
         {{-- two-column main: text (left) + screenshots + stats + partners (right) --}}
         <div class="grid grid-cols-1 gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
@@ -32,7 +32,7 @@
 
                 {{-- description --}}
                 <p class="max-w-[52ch] text-[14px] leading-[1.7] text-[var(--color-text-muted)] md:text-[15px]">
-                    A new era of all-in-one sports development — bringing education and technology together from grassroots to professional level, uniting partner courses, certification, performance analysis, and digital services.
+                    {{ __('sections.hub_description') }}
                 </p>
 
                 {{-- CTA --}}
@@ -46,16 +46,16 @@
                     <span
                         class="text-eyebrow shrink-0 text-[var(--color-accent-gold)] whitespace-nowrap"
                         style="writing-mode: vertical-rl; transform: rotate(180deg);"
-                    >Integrated Coverage</span>
+                    >{{ __('sections.integrated_coverage') }}</span>
                     <div class="flex flex-col gap-2">
-                        <span class="text-[clamp(56px,8.5vw,140px)] uppercase leading-[0.9] text-[var(--color-accent-gold)]" style="font-family: var(--font-display);">All-In-One</span>
-                        <span class="text-eyebrow text-[var(--color-text-dim)]">Platform · Grassroots to Professional Level</span>
+                        <span class="text-[clamp(56px,8.5vw,140px)] uppercase leading-[0.9] text-[var(--color-accent-gold)]" style="font-family: var(--font-display);">{{ __('sections.all_in_one') }}</span>
+                        <span class="text-eyebrow text-[var(--color-text-dim)]">{{ __('sections.platform_grassroots') }}</span>
                     </div>
                 </div>
 
                 {{-- tagline --}}
                 <p class="text-[12.5px] leading-[1.5] text-[var(--color-text-muted)] md:text-[13px]">
-                    Performance analysis · managed access · recognized credentials across every aspect of sport.
+                    {{ __('sections.hub_tagline') }}
                 </p>
             </div>
 
@@ -95,7 +95,7 @@
 
                 {{-- partnerships row: 5 empty logo cards (dashboard-ready) --}}
                 <div class="flex flex-col gap-4">
-                    <x-eyebrow tone="dim">Partnerships</x-eyebrow>
+                    <x-eyebrow tone="dim">{{ __('sections.partnerships') }}</x-eyebrow>
                     @php
                         $hubPartners = [
                             'Barça Innovation Hub',

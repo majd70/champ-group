@@ -8,7 +8,7 @@
         {{-- eyebrow --}}
         <div class="flex items-center gap-3">
             <span aria-hidden="true" class="inline-block h-1.5 w-1.5 rounded-full bg-[var(--color-accent-gold)]"></span>
-            <x-eyebrow tone="gold">Champions Group · Trusted Network</x-eyebrow>
+            <x-eyebrow tone="gold">{{ __('sections.trusted_network') }}</x-eyebrow>
         </div>
 
         {{-- header: title (left) + description (right) --}}
@@ -24,7 +24,7 @@
             <div class="flex flex-col gap-5 lg:pb-3">
                 <span aria-hidden="true" class="block h-[2px] w-16 bg-[var(--color-accent-gold)]"></span>
                 <p class="max-w-[44ch] text-[14px] leading-[1.7] text-[var(--color-text-muted)] md:text-[15px]">
-                    A decade of partnerships across institutions, federations, brands, and global enterprises — anchoring every division of Champions Group.
+                    {{ __('sections.partners_description') }}
                 </p>
                 <x-visit-button class="mt-2" />
             </div>
@@ -34,7 +34,7 @@
         @php
             $tiers = [
                 [
-                    'label' => 'International',
+                    'label' => __('sections.tier_international'),
                     'logos' => [
                         'FC Barcelona',
                         'Metrica Sports',
@@ -47,7 +47,7 @@
                     ],
                 ],
                 [
-                    'label' => 'Regional',
+                    'label' => __('sections.tier_regional'),
                     'logos' => [
                         'RSM Regional Sports Management',
                         'Nafess.com',
@@ -60,7 +60,7 @@
                     ],
                 ],
                 [
-                    'label' => 'Local',
+                    'label' => __('sections.tier_local'),
                     'logos' => [
                         'Pepsi',
                         'UNRWA',
@@ -70,7 +70,7 @@
                         'Bank of Palestine',
                         'Joul',
                     ],
-                    'more_text' => '+40 More Partners',
+                    'more_text' => __('sections.more_partners'),
                 ],
             ];
         @endphp
@@ -81,7 +81,7 @@
                     {{-- Tier label --}}
                     <div class="flex w-[110px] shrink-0 flex-col gap-1 md:w-[140px]">
                         <x-eyebrow tone="gold">{{ $tier['label'] }}</x-eyebrow>
-                        <span class="text-[clamp(20px,2vw,30px)] uppercase leading-none text-white" style="font-family: var(--font-display);">Partners</span>
+                        <span class="text-[clamp(20px,2vw,30px)] uppercase leading-none text-white" style="font-family: var(--font-display);">{{ __('sections.partners_word') }}</span>
                     </div>
 
                     {{-- 8-column card grid --}}

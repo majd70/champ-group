@@ -1,5 +1,9 @@
+@php
+    $currentLocale = app()->getLocale();
+    $localeData = config('app.available_locales.' . $currentLocale, ['dir' => 'ltr']);
+@endphp
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="{{ $currentLocale }}" dir="{{ $localeData['dir'] ?? 'ltr' }}" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    {{-- Alpine.js for the language switcher dropdown (and any future small interactions) --}}
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.5/dist/cdn.min.js"></script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>

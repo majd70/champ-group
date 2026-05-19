@@ -8,11 +8,11 @@
         {{-- top eyebrow --}}
         <div class="js-hero-eyebrow flex items-center gap-3 pb-1">
             <span aria-hidden="true" class="inline-block h-1.5 w-1.5 rounded-full bg-[var(--color-accent-gold)]"></span>
-            <x-eyebrow tone="white">Champions Group</x-eyebrow>
+            <x-eyebrow tone="white">{{ __('sections.hero_eyebrow') }}</x-eyebrow>
             <span aria-hidden="true" class="text-eyebrow text-[var(--color-text-dim)]">·</span>
-            <x-eyebrow tone="dim">Est. 2015</x-eyebrow>
+            <x-eyebrow tone="dim">{{ __('sections.hero_est') }}</x-eyebrow>
             <span aria-hidden="true" class="text-eyebrow text-[var(--color-text-dim)]">·</span>
-            <x-eyebrow tone="dim">MENA</x-eyebrow>
+            <x-eyebrow tone="dim">{{ __('sections.hero_mena') }}</x-eyebrow>
         </div>
 
         {{-- main split: left content + right olive panel --}}
@@ -30,7 +30,7 @@
                 {{-- body paragraph + CTA --}}
                 <div class="flex flex-col gap-6">
                     <p class="js-hero-desc max-w-[52ch] text-[14px] leading-[1.75] text-[var(--color-text-muted)] md:text-[15px]">
-                        A diversified sports ecosystem advancing the sports sector in MENA since 2015 — combining education, technology, consultation, events, and community sports services through our integrated divisions.
+                        {{ __('sections.hero_description') }}
                     </p>
                     <x-visit-button />
                 </div>

@@ -9,7 +9,7 @@
         <div class="flex flex-col gap-10">
 
             {{-- top eyebrow --}}
-            <x-eyebrow tone="dim">Champions Group · Founded 2015</x-eyebrow>
+            <x-eyebrow tone="dim">{{ __('sections.founded_2015') }}</x-eyebrow>
 
             {{-- title row: Champions ACADEMY + shield, with right padding to keep shield off the divider --}}
             <div class="flex items-center gap-5 md:gap-8 lg:pr-16">
@@ -29,7 +29,7 @@
 
             {{-- description --}}
             <p class="max-w-[50ch] text-[14px] leading-[1.7] text-[var(--color-text-muted)] md:text-[15px]">
-                Cultivating educated generations to compete internationally across nine sports academies including football, basketball, tennis, swimming, karate, and more.
+                {{ __('sections.academy_description') }}
             </p>
 
             {{-- CTA --}}
@@ -43,16 +43,16 @@
                 <span
                     class="text-eyebrow shrink-0 text-[var(--color-text-dim)] whitespace-nowrap"
                     style="writing-mode: vertical-rl; transform: rotate(180deg);"
-                >Players Developed</span>
+                >{{ __('sections.players_developed') }}</span>
                 <div class="flex flex-col gap-3">
                     <span class="stat-counter text-[clamp(64px,10vw,160px)] leading-[0.9] tabular-nums text-[var(--color-accent-gold)]" style="font-family: var(--font-display);">8,000</span>
-                    <x-eyebrow tone="dim">Players · 5,600 Male · 2,400 Female</x-eyebrow>
+                    <x-eyebrow tone="dim">{{ __('sections.players_breakdown') }}</x-eyebrow>
                 </div>
             </div>
 
             {{-- extra info --}}
             <p class="text-[13px] leading-[1.5] text-[var(--color-text-muted)] md:text-[14px]">
-                Plus 6 basketball cups · 8 table tennis cups · 1 player active in Spain.
+                {{ __('sections.academy_extra') }}
             </p>
         </div>
 
@@ -83,7 +83,7 @@
             {{-- partnerships + footer pushed to bottom of column to align with 8,000 block on left --}}
             <div class="mt-10 flex flex-col gap-10 lg:mt-auto lg:pt-12">
                 <div class="flex flex-col gap-5">
-                    <x-eyebrow tone="dim">Partnerships</x-eyebrow>
+                    <x-eyebrow tone="dim">{{ __('sections.partnerships') }}</x-eyebrow>
                     @php
                         $academyPartners = [
                             'Real Madrid Football Program',

@@ -1,16 +1,18 @@
 @php
+    // Footer "Explore" column — uses translated nav labels
     $exploreLinks = [
-        ['href' => '#page-01', 'label' => 'Home'],
-        ['href' => '#page-02', 'label' => 'Partners'],
-        ['href' => '#page-03', 'label' => 'Services'],
-        ['href' => '#page-04', 'label' => 'Hub'],
-        ['href' => '#page-05', 'label' => 'LMS'],
-        ['href' => '#page-06', 'label' => 'Academy'],
-        ['href' => '#page-08', 'label' => 'Club'],
-        ['href' => '#page-10', 'label' => "Al Jalaa'"],
-        ['href' => '#page-11', 'label' => 'EgytalHub'],
+        ['href' => '#page-01', 'label' => __('nav.home')],
+        ['href' => '#page-02', 'label' => __('nav.partners')],
+        ['href' => '#page-03', 'label' => __('nav.services')],
+        ['href' => '#page-04', 'label' => __('nav.hub')],
+        ['href' => '#page-05', 'label' => __('nav.lms')],
+        ['href' => '#page-06', 'label' => __('nav.academy')],
+        ['href' => '#page-08', 'label' => __('nav.club')],
+        ['href' => '#page-10', 'label' => __('nav.al_jalaa')],
+        ['href' => '#page-11', 'label' => __('nav.egytalhub')],
     ];
 
+    // Brand names stay hard-coded as proper nouns
     $brands = [
         ['href' => '#page-06', 'label' => 'Champions Academy'],
         ['href' => '#page-08', 'label' => 'Champions Club'],
@@ -47,18 +49,18 @@
                 </a>
 
                 <p class="max-w-[42ch] text-[13px] leading-[1.65] text-[#a8b0c2]">
-                    A diversified sports ecosystem advancing the sports sector in MENA since 2015.
+                    {{ __('footer.tagline') }}
                 </p>
 
                 <span class="text-[11px] font-medium uppercase tracking-[0.18em] text-[var(--color-text-dim)]">
-                    Est. 2015 · MENA
+                    {{ __('footer.established') }}
                 </span>
             </div>
 
             {{-- COLUMN 2: EXPLORE --}}
             <div class="flex flex-col gap-5">
                 <h3 class="text-[12px] font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-gold)]">
-                    Explore
+                    {{ __('footer.explore') }}
                 </h3>
                 <ul class="flex flex-col gap-2.5 text-[13px]">
                     @foreach ($exploreLinks as $link)
@@ -75,7 +77,7 @@
             {{-- COLUMN 3: OUR BRANDS --}}
             <div class="flex flex-col gap-5">
                 <h3 class="text-[12px] font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-gold)]">
-                    Our Brands
+                    {{ __('footer.our_brands') }}
                 </h3>
                 <ul class="flex flex-col gap-2.5 text-[13px]">
                     @foreach ($brands as $brand)
@@ -92,7 +94,7 @@
             {{-- COLUMN 4: GET IN TOUCH --}}
             <div class="flex flex-col gap-5">
                 <h3 class="text-[12px] font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-gold)]">
-                    Get in Touch
+                    {{ __('footer.get_in_touch') }}
                 </h3>
 
                 <ul class="flex flex-col gap-3 text-[13px]">
@@ -101,8 +103,8 @@
                             <rect x="3" y="5" width="18" height="14" rx="2"/>
                             <path d="M3 7l9 6 9-6"/>
                         </svg>
-                        <a href="mailto:info@championsgroup.com" class="text-[var(--color-display-cream)] transition-colors hover:text-[var(--color-accent-gold)]">
-                            info@championsgroup.com
+                        <a href="mailto:{{ __('footer.email') }}" class="text-[var(--color-display-cream)] transition-colors hover:text-[var(--color-accent-gold)]">
+                            {{ __('footer.email') }}
                         </a>
                     </li>
                     <li class="flex items-start gap-3">
@@ -110,7 +112,7 @@
                             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                         </svg>
                         <a href="tel:+970000000000" class="text-[var(--color-display-cream)] transition-colors hover:text-[var(--color-accent-gold)]">
-                            +970 XXX XXX XXX
+                            {{ __('footer.phone') }}
                         </a>
                     </li>
                     <li class="flex items-start gap-3">
@@ -118,7 +120,7 @@
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                             <circle cx="12" cy="10" r="3"/>
                         </svg>
-                        <span class="text-[var(--color-display-cream)]">MENA Region</span>
+                        <span class="text-[var(--color-display-cream)]">{{ __('footer.mena_region') }}</span>
                     </li>
                 </ul>
 
@@ -161,11 +163,11 @@
         {{-- BOTTOM BAR --}}
         <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <p class="text-[12px] text-[var(--color-text-dim)]">
-                © {{ date('Y') }} Champions Group. All rights reserved.
+                {{ __('footer.copyright', ['year' => date('Y')]) }}
             </p>
             <div class="flex items-center gap-6 text-[12px]">
-                <a href="#" class="text-[var(--color-text-dim)] transition-colors hover:text-[var(--color-accent-gold)]">Privacy Policy</a>
-                <a href="#" class="text-[var(--color-text-dim)] transition-colors hover:text-[var(--color-accent-gold)]">Terms of Service</a>
+                <a href="#" class="text-[var(--color-text-dim)] transition-colors hover:text-[var(--color-accent-gold)]">{{ __('footer.privacy_policy') }}</a>
+                <a href="#" class="text-[var(--color-text-dim)] transition-colors hover:text-[var(--color-accent-gold)]">{{ __('footer.terms') }}</a>
             </div>
         </div>
     </div>

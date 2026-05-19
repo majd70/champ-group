@@ -86,6 +86,23 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Available Locales
+    |--------------------------------------------------------------------------
+    |
+    | The set of locales the application supports, used by the language
+    | switcher in the UI. Add a new key here to make a language available
+    | site-wide — see LANGUAGES.md for the full procedure.
+    |
+    */
+
+    'available_locales' => [
+        'en' => ['name' => 'English', 'native' => 'EN', 'flag' => '🇬🇧', 'dir' => 'ltr'],
+        // 'ar' => ['name' => 'Arabic',  'native' => 'عربي', 'flag' => '🇸🇦', 'dir' => 'rtl'],
+        // 'fr' => ['name' => 'French',  'native' => 'FR',  'flag' => '🇫🇷', 'dir' => 'ltr'],
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Encryption Key
     |--------------------------------------------------------------------------
     |

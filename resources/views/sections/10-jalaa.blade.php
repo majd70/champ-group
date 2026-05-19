@@ -9,11 +9,11 @@
         <div class="flex flex-col gap-10">
 
             {{-- top eyebrow --}}
-            <x-eyebrow tone="dim">Champions Group · Founded 1992 · Acquired 2022 · Gaza</x-eyebrow>
+            <x-eyebrow tone="dim">{{ __('sections.jalaa_eyebrow') }}</x-eyebrow>
 
             {{-- title: "Al" sits above, then JALAA' + shield share the same row so they align --}}
             <h2 id="jalaa-title" class="flex flex-col gap-1">
-                <span style="font-family: var(--font-italic); font-style: italic;" class="text-[clamp(36px,4.5vw,72px)] leading-[0.95] text-[var(--color-accent-gold)]">Al</span>
+                <span style="font-family: var(--font-italic); font-style: italic;" class="text-[clamp(36px,4.5vw,72px)] leading-[0.95] text-[var(--color-accent-gold)]">{{ __('sections.al') }}</span>
                 <div class="flex items-center gap-12 md:gap-20">
                     <span class="text-[clamp(64px,9vw,150px)] uppercase leading-[0.88] text-[var(--color-display-cream)]" style="font-family: var(--font-display);">Jalaa&rsquo;</span>
                     <img
@@ -29,7 +29,7 @@
 
             {{-- description --}}
             <p class="max-w-[55ch] text-[14px] leading-[1.7] text-[var(--color-text-muted)] md:text-[15px]">
-                One of Gaza&rsquo;s oldest sports clubs — serving all ages and genders across multiple sports. Acquired by Champions Group in 2022, rebranded with a renewed phoenix emblem and now operating as the group&rsquo;s non-profit arm focused on community, education, and athletic development.
+                {{ __('sections.jalaa_description') }}
             </p>
 
             {{-- horizontal divider --}}
@@ -40,19 +40,19 @@
                 <span
                     class="text-eyebrow shrink-0 text-[var(--color-text-dim)] whitespace-nowrap"
                     style="writing-mode: vertical-rl; transform: rotate(180deg);"
-                >Founded</span>
+                >{{ __('sections.founded') }}</span>
                 <div class="flex flex-col gap-2">
                     <div class="flex flex-col leading-[0.85]">
                         <span class="stat-counter text-[clamp(64px,10vw,160px)] tabular-nums text-[var(--color-accent-gold)]" style="font-family: var(--font-display);">19</span>
                         <span class="stat-counter text-[clamp(64px,10vw,160px)] tabular-nums text-[var(--color-accent-gold)]" style="font-family: var(--font-display);">92</span>
                     </div>
-                    <x-eyebrow tone="dim">Year Founded · Palestinian Second Division</x-eyebrow>
+                    <x-eyebrow tone="dim">{{ __('sections.year_founded_div') }}</x-eyebrow>
                 </div>
             </div>
 
             {{-- ambitions --}}
             <p class="text-[13px] leading-[1.5] text-[var(--color-text-muted)] md:text-[14px]">
-                <span class="text-[var(--color-display-cream)]">Ambitions:</span> Win the Palestinian league and compete internationally.
+                <span class="text-[var(--color-display-cream)]">{{ __('sections.ambitions') }}</span> {{ __('sections.ambitions_text') }}
             </p>
 
             {{-- CTA --}}
