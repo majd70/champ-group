@@ -11,8 +11,8 @@
         {{-- top zone: title (left) + laptops (right) --}}
         <div class="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1fr_2.3fr] lg:gap-8">
             <h2 id="lms-title" class="flex flex-col">
-                <span style="font-family: var(--font-italic); font-style: italic;" class="text-[clamp(40px,5.5vw,90px)] leading-[0.95] text-[var(--color-accent-gold)]">Champions</span>
-                <span class="text-[clamp(80px,12vw,180px)] uppercase leading-[0.88] text-[var(--color-display-cream)]" style="font-family: var(--font-display);">LMS</span>
+                <span style="font-family: var(--font-italic); font-style: italic;" class="text-[clamp(40px,5.5vw,90px)] leading-[0.95] text-[var(--color-accent-gold)]">{{ __('titles.champions') }}</span>
+                <span class="text-[clamp(80px,12vw,180px)] uppercase leading-[0.88] text-[var(--color-display-cream)]" style="font-family: var(--font-display);">{{ __('titles.lms') }}</span>
             </h2>
 
             <img
@@ -42,12 +42,12 @@
         {{-- 6-stat grid: 2 rows × 3 cols, divider between rows --}}
         @php
             $stats = [
-                ['number' => '11',    'label' => 'Lesson Types',       'caption' => 'From Video to Quizzes'],
-                ['number' => '1000+', 'label' => 'Active Learners',    'caption' => 'Across 9 Customers'],
-                ['number' => '5',     'label' => 'AI Mentor Personas', 'caption' => 'With Long-Term Memory'],
-                ['number' => '50+',   'label' => 'Courses Hosted',     'caption' => 'Multi-Tenant Library'],
-                ['number' => '5+',    'label' => 'Languages',          'caption' => 'With RTL Support'],
-                ['number' => '24/7',  'label' => 'AI Companion',       'caption' => 'Time-Aware Greetings'],
+                ['number' => '11',    'label' => __('stats.lms_11_label'),    'caption' => __('stats.lms_11_caption')],
+                ['number' => '1000+', 'label' => __('stats.lms_1000_label'),  'caption' => __('stats.lms_1000_caption')],
+                ['number' => '5',     'label' => __('stats.lms_5_label'),     'caption' => __('stats.lms_5_caption')],
+                ['number' => '50+',   'label' => __('stats.lms_50_label'),    'caption' => __('stats.lms_50_caption')],
+                ['number' => '5+',    'label' => __('stats.lms_5plus_label'), 'caption' => __('stats.lms_5plus_caption')],
+                ['number' => '24/7',  'label' => __('stats.lms_247_label'),   'caption' => __('stats.lms_247_caption')],
             ];
         @endphp
         <div class="grid grid-cols-1 gap-y-8 sm:grid-cols-2 md:grid-cols-3 md:gap-x-12 md:gap-y-10">

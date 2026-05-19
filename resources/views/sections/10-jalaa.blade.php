@@ -13,9 +13,9 @@
 
             {{-- title: "Al" sits above, then JALAA' + shield share the same row so they align --}}
             <h2 id="jalaa-title" class="flex flex-col gap-1">
-                <span style="font-family: var(--font-italic); font-style: italic;" class="text-[clamp(36px,4.5vw,72px)] leading-[0.95] text-[var(--color-accent-gold)]">{{ __('sections.al') }}</span>
+                <span style="font-family: var(--font-italic); font-style: italic;" class="text-[clamp(36px,4.5vw,72px)] leading-[0.95] text-[var(--color-accent-gold)]">{{ __('titles.al') }}</span>
                 <div class="flex items-center gap-12 md:gap-20">
-                    <span class="text-[clamp(64px,9vw,150px)] uppercase leading-[0.88] text-[var(--color-display-cream)]" style="font-family: var(--font-display);">Jalaa&rsquo;</span>
+                    <span class="text-[clamp(64px,9vw,150px)] uppercase leading-[0.88] text-[var(--color-display-cream)]" style="font-family: var(--font-display);">{{ __('titles.jalaa') }}</span>
                     <img
                         src="{{ asset('images/page-10/shield.png') }}"
                         alt="Al Jalaa shield logo — orange phoenix emblem"
@@ -60,7 +60,7 @@
         </div>
 
         {{-- RIGHT COLUMN --}}
-        <div class="flex flex-col gap-10 lg:gap-0 lg:border-l lg:border-[var(--color-divider)] lg:pl-12">
+        <div class="flex flex-col gap-10 lg:gap-0 lg:border-s lg:border-[var(--color-divider)] lg:ps-12">
 
             {{-- 2x2 photos collage --}}
             <img
@@ -75,12 +75,12 @@
             {{-- 6-stat grid + footer pushed to bottom of column --}}
             @php
                 $stats = [
-                    ['number' => '9,000', 'label' => 'Fans & Supporters',  'caption' => 'Community'],
-                    ['number' => '9',     'label' => 'Sports Disciplines', 'caption' => 'Breadth'],
-                    ['number' => '40',    'label' => 'Championships Won',  'caption' => 'Honors'],
-                    ['number' => '34',    'label' => 'Years of Heritage',  'caption' => 'Legacy'],
-                    ['number' => '50',    'label' => 'Active Players',     'caption' => 'Roster'],
-                    ['number' => '1992',  'label' => 'Year Founded',       'caption' => 'Origin'],
+                    ['number' => '9,000', 'label' => __('stats.jalaa_9000_label'), 'caption' => __('stats.jalaa_9000_caption')],
+                    ['number' => '9',     'label' => __('stats.jalaa_9_label'),    'caption' => __('stats.jalaa_9_caption')],
+                    ['number' => '40',    'label' => __('stats.jalaa_40_label'),   'caption' => __('stats.jalaa_40_caption')],
+                    ['number' => '34',    'label' => __('stats.jalaa_34_label'),   'caption' => __('stats.jalaa_34_caption')],
+                    ['number' => '50',    'label' => __('stats.jalaa_50_label'),   'caption' => __('stats.jalaa_50_caption')],
+                    ['number' => '1992',  'label' => __('stats.jalaa_1992_label'), 'caption' => __('stats.jalaa_1992_caption')],
                 ];
             @endphp
             <div class="mt-10 flex flex-col gap-10 lg:mt-auto lg:pt-12">

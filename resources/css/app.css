@@ -33,6 +33,22 @@
     section[id^="page-"] {
         scroll-margin-top: 72px;
     }
+
+    /* Arabic / RTL — swap all 3 font roles to Tajawal which has Arabic glyphs.
+       The English condensed display (Anton) and serif italic (DM Serif Display)
+       have no Arabic coverage so they fall back to Tajawal heavy weights. */
+    html[dir="rtl"] {
+        --font-sans:    'Tajawal', ui-sans-serif, system-ui, sans-serif;
+        --font-display: 'Tajawal', ui-sans-serif, system-ui, sans-serif;
+        --font-italic:  'Tajawal', ui-sans-serif, system-ui, sans-serif;
+    }
+    html[dir="rtl"] [style*="font-family: var(--font-display)"] {
+        font-weight: 900;
+    }
+    html[dir="rtl"] [style*="font-style: italic"] {
+        font-style: normal;
+        font-weight: 700;
+    }
 }
 
 @utility text-eyebrow {

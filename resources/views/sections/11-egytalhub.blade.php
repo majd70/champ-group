@@ -13,7 +13,7 @@
 
             {{-- title (no italic prefix on this page) --}}
             <h2 id="egytalhub-title" class="text-[clamp(56px,8.5vw,150px)] uppercase leading-[0.88] text-[var(--color-display-cream)]" style="font-family: var(--font-display);">
-                Egytalhub
+                {{ __('titles.egytalhub') }}
             </h2>
 
             {{-- description --}}
@@ -46,7 +46,7 @@
         </div>
 
         {{-- RIGHT COLUMN --}}
-        <div class="flex flex-col gap-10 lg:gap-0 lg:border-l lg:border-[var(--color-divider)] lg:pl-12">
+        <div class="flex flex-col gap-10 lg:gap-0 lg:border-s lg:border-[var(--color-divider)] lg:ps-12">
 
             {{-- Egytalhub logo --}}
             <div class="flex items-center justify-center py-4">
@@ -63,12 +63,12 @@
             {{-- 6-stat grid (Egytalhub orange accent) + footer pushed down --}}
             @php
                 $stats = [
-                    ['number' => '66+',    'label' => 'Employees',          'caption' => 'Growing Since Aug 2024'],
-                    ['number' => '50%',    'label' => 'Cost Reduction',     'caption' => 'vs Onsite Hiring'],
-                    ['number' => '34+',    'label' => 'Clients',            'caption' => 'USA · UK · Europe · GCC'],
-                    ['number' => '350+',   'label' => 'Vetted Talents',     'caption' => 'Ready to Deploy Globally'],
-                    ['number' => '72 HRS', 'label' => 'Avg. Hiring Time',   'caption' => 'Staff Augmentation Service'],
-                    ['number' => '95%',    'label' => 'Client Satisfaction','caption' => 'Across Engagements'],
+                    ['number' => '66+',    'label' => __('stats.egytal_66_label'),  'caption' => __('stats.egytal_66_caption')],
+                    ['number' => '50%',    'label' => __('stats.egytal_50_label'),  'caption' => __('stats.egytal_50_caption')],
+                    ['number' => '34+',    'label' => __('stats.egytal_34_label'),  'caption' => __('stats.egytal_34_caption')],
+                    ['number' => '350+',   'label' => __('stats.egytal_350_label'), 'caption' => __('stats.egytal_350_caption')],
+                    ['number' => '72 HRS', 'label' => __('stats.egytal_72_label'),  'caption' => __('stats.egytal_72_caption')],
+                    ['number' => '95%',    'label' => __('stats.egytal_95_label'),  'caption' => __('stats.egytal_95_caption')],
                 ];
             @endphp
             <div class="mt-10 flex flex-col gap-10 lg:mt-auto lg:pt-8">

@@ -12,14 +12,14 @@
         ['href' => '#page-11', 'label' => __('nav.egytalhub')],
     ];
 
-    // Brand names stay hard-coded as proper nouns
+    // Brand names translated via brands.php so Arabic mode is fully localized
     $brands = [
-        ['href' => '#page-06', 'label' => 'Champions Academy'],
-        ['href' => '#page-08', 'label' => 'Champions Club'],
-        ['href' => '#page-04', 'label' => 'Champions Hub'],
-        ['href' => '#page-05', 'label' => 'Champions LMS'],
-        ['href' => '#page-10', 'label' => "Al Jalaa'"],
-        ['href' => '#page-11', 'label' => 'EgytalHub'],
+        ['href' => '#page-06', 'label' => __('brands.academy')],
+        ['href' => '#page-08', 'label' => __('brands.club')],
+        ['href' => '#page-04', 'label' => __('brands.hub')],
+        ['href' => '#page-05', 'label' => __('brands.lms')],
+        ['href' => '#page-10', 'label' => __('brands.al_jalaa')],
+        ['href' => '#page-11', 'label' => __('brands.egytalhub')],
     ];
 @endphp
 
@@ -44,7 +44,7 @@
                         draggable="false"
                     >
                     <span class="text-[14px] font-semibold uppercase tracking-[0.18em] text-white">
-                        Champions Group
+                        {{ __('brands.group') }}
                     </span>
                 </a>
 

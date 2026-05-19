@@ -14,15 +14,15 @@
             {{-- title row: Champions CLUB + shield, shield pushed to far right --}}
             <div class="flex items-center gap-6">
                 <h2 id="club-title" class="flex flex-col">
-                    <span style="font-family: var(--font-italic); font-style: italic;" class="text-[clamp(36px,4.5vw,72px)] leading-[0.95] text-[var(--color-accent-gold)]">Champions</span>
-                    <span class="text-[clamp(72px,10vw,170px)] uppercase leading-[0.88] text-[var(--color-display-cream)]" style="font-family: var(--font-display);">Club</span>
+                    <span style="font-family: var(--font-italic); font-style: italic;" class="text-[clamp(36px,4.5vw,72px)] leading-[0.95] text-[var(--color-accent-gold)]">{{ __('titles.champions') }}</span>
+                    <span class="text-[clamp(72px,10vw,170px)] uppercase leading-[0.88] text-[var(--color-display-cream)]" style="font-family: var(--font-display);">{{ __('titles.club') }}</span>
                 </h2>
                 <img
                     src="{{ asset('images/page-08/shield.png') }}"
                     alt="Champions Club shield logo"
                     width="320"
                     height="540"
-                    class="ml-auto block h-auto w-[clamp(90px,11vw,150px)] select-none lg:mr-8"
+                    class="ms-auto block h-auto w-[clamp(90px,11vw,150px)] select-none lg:me-8"
                     draggable="false"
                 >
             </div>
@@ -57,17 +57,17 @@
         </div>
 
         {{-- RIGHT COLUMN --}}
-        <div class="flex flex-col gap-10 lg:gap-0 lg:border-l lg:border-[var(--color-divider)] lg:pl-12 lg:pt-20">
+        <div class="flex flex-col gap-10 lg:gap-0 lg:border-s lg:border-[var(--color-divider)] lg:ps-12 lg:pt-20">
 
             {{-- 6-stat grid --}}
             @php
                 $stats = [
-                    ['number' => '+1ST',    'label' => 'Family Club in Palestine', 'caption' => null],
-                    ['number' => '+3,000',  'label' => 'Members',                  'caption' => 'Active'],
-                    ['number' => '+200K',   'label' => 'Annual Visitors',          'caption' => 'Per Year'],
-                    ['number' => '+1,220',  'label' => 'Activities',               'caption' => 'Sports + Cultural'],
-                    ['number' => '55',      'label' => 'Staff',                    'caption' => 'On-Site'],
-                    ['number' => '+50',     'label' => 'Community Initiatives',    'caption' => 'Outreach'],
+                    ['number' => '+1ST',   'label' => __('stats.club_1st_label'),  'caption' => null],
+                    ['number' => '+3,000', 'label' => __('stats.club_3000_label'),  'caption' => __('stats.club_3000_caption')],
+                    ['number' => '+200K',  'label' => __('stats.club_200k_label'),  'caption' => __('stats.club_200k_caption')],
+                    ['number' => '+1,220', 'label' => __('stats.club_1220_label'),  'caption' => __('stats.club_1220_caption')],
+                    ['number' => '55',     'label' => __('stats.club_55_label'),    'caption' => __('stats.club_55_caption')],
+                    ['number' => '+50',    'label' => __('stats.club_50_label'),    'caption' => __('stats.club_50_caption')],
                 ];
             @endphp
             <div class="grid grid-cols-3 gap-x-4 gap-y-6 md:gap-x-6 md:gap-y-8">

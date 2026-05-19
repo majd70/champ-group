@@ -19,12 +19,12 @@
         <div class="relative mt-10 grid flex-1 grid-cols-1 gap-10 lg:mt-0 lg:grid-cols-[1.55fr_1fr] lg:gap-0">
 
             {{-- LEFT: headline, paragraph, stats --}}
-            <div class="flex flex-col justify-between gap-12 lg:pr-12 lg:py-10">
+            <div class="flex flex-col justify-between gap-12 lg:pe-12 lg:py-10">
 
                 {{-- headline --}}
                 <h1 id="hero-title" class="flex flex-col">
-                    <span class="js-hero-title-line text-display-xxl text-[var(--color-display-cream)]">Champions</span>
-                    <span class="js-hero-title-line text-display-xxl -mt-2 text-[var(--color-accent-gold)] md:-mt-4">Group</span>
+                    <span class="js-hero-title-line text-display-xxl text-[var(--color-display-cream)]">{{ __('titles.champions') }}</span>
+                    <span class="js-hero-title-line text-display-xxl -mt-2 text-[var(--color-accent-gold)] md:-mt-4">{{ __('titles.group') }}</span>
                 </h1>
 
                 {{-- body paragraph + CTA --}}
@@ -38,24 +38,24 @@
                 {{-- stats row --}}
                 <dl class="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 md:grid-cols-5 md:gap-x-8">
                     <div>
-                        <dt class="sr-only">Building MENA Sport</dt>
-                        <dd><x-stat-block class="js-hero-stat" number="12" unit="YR" label="Building MENA Sport" /></dd>
+                        <dt class="sr-only">{{ __('stats.hero_building_mena') }}</dt>
+                        <dd><x-stat-block class="js-hero-stat" number="12" :unit="__('stats.hero_yr')" :label="__('stats.hero_building_mena')" /></dd>
                     </div>
                     <div>
-                        <dt class="sr-only">Strategic Partners</dt>
-                        <dd><x-stat-block class="js-hero-stat" number="50+" label="Strategic Partners" /></dd>
+                        <dt class="sr-only">{{ __('stats.hero_strategic_partners') }}</dt>
+                        <dd><x-stat-block class="js-hero-stat" number="50+" :label="__('stats.hero_strategic_partners')" /></dd>
                     </div>
                     <div>
-                        <dt class="sr-only">Group Arms</dt>
-                        <dd><x-stat-block class="js-hero-stat" number="6" label="Group Arms" /></dd>
+                        <dt class="sr-only">{{ __('stats.hero_group_arms') }}</dt>
+                        <dd><x-stat-block class="js-hero-stat" number="6" :label="__('stats.hero_group_arms')" /></dd>
                     </div>
                     <div>
-                        <dt class="sr-only">Registered Countries</dt>
-                        <dd><x-stat-block class="js-hero-stat" number="5" label="Registered Countries" /></dd>
+                        <dt class="sr-only">{{ __('stats.hero_registered_countries') }}</dt>
+                        <dd><x-stat-block class="js-hero-stat" number="5" :label="__('stats.hero_registered_countries')" /></dd>
                     </div>
                     <div>
-                        <dt class="sr-only">Team Members</dt>
-                        <dd><x-stat-block class="js-hero-stat" number="180" label="Team Members" /></dd>
+                        <dt class="sr-only">{{ __('stats.hero_team_members') }}</dt>
+                        <dd><x-stat-block class="js-hero-stat" number="180" :label="__('stats.hero_team_members')" /></dd>
                     </div>
                 </dl>
             </div>
@@ -87,7 +87,7 @@
                 {{-- vertical caps rail at right edge --}}
                 <div
                     aria-hidden="true"
-                    class="js-hero-rail absolute right-2 top-1/2 hidden -translate-y-1/2 lg:block"
+                    class="js-hero-rail absolute end-2 top-1/2 hidden -translate-y-1/2 lg:block"
                 >
                     <span
                         class="text-eyebrow text-[var(--color-accent-gold)]/80 whitespace-nowrap"

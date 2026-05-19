@@ -12,10 +12,10 @@
             <x-eyebrow tone="dim">{{ __('sections.founded_2015') }}</x-eyebrow>
 
             {{-- title row: Champions ACADEMY + shield, with right padding to keep shield off the divider --}}
-            <div class="flex items-center gap-5 md:gap-8 lg:pr-16">
+            <div class="flex items-center gap-5 md:gap-8 lg:pe-16">
                 <h2 id="academy-title" class="flex flex-col">
-                    <span style="font-family: var(--font-italic); font-style: italic;" class="text-[clamp(32px,4vw,64px)] leading-[0.95] text-[var(--color-accent-gold)]">Champions</span>
-                    <span class="text-[clamp(56px,8vw,130px)] uppercase leading-[0.88] text-[var(--color-display-cream)]" style="font-family: var(--font-display);">Academy</span>
+                    <span style="font-family: var(--font-italic); font-style: italic;" class="text-[clamp(32px,4vw,64px)] leading-[0.95] text-[var(--color-accent-gold)]">{{ __('titles.champions') }}</span>
+                    <span class="text-[clamp(56px,8vw,130px)] uppercase leading-[0.88] text-[var(--color-display-cream)]" style="font-family: var(--font-display);">{{ __('titles.academy') }}</span>
                 </h2>
                 <img
                     src="{{ asset('images/page-06/shield.png') }}"
@@ -57,17 +57,17 @@
         </div>
 
         {{-- RIGHT COLUMN --}}
-        <div class="flex flex-col gap-10 lg:gap-0 lg:border-l lg:border-[var(--color-divider)] lg:pl-12 lg:pt-20">
+        <div class="flex flex-col gap-10 lg:gap-0 lg:border-s lg:border-[var(--color-divider)] lg:ps-12 lg:pt-20">
 
             {{-- 6-stat grid (top of column) --}}
             @php
                 $stats = [
-                    ['number' => '70', 'label' => 'Employees',         'caption' => 'Coaching Staff'],
-                    ['number' => '9',  'label' => 'Sports Academies',  'caption' => 'Disciplines'],
-                    ['number' => '8',  'label' => 'Football Branches', 'caption' => 'Locations'],
-                    ['number' => '8',  'label' => 'Football Cups',     'caption' => 'Won'],
-                    ['number' => '10', 'label' => 'Karate Medals',     'caption' => 'Competition'],
-                    ['number' => '3',  'label' => 'Pro Players Abroad','caption' => 'International'],
+                    ['number' => '70', 'label' => __('stats.academy_70_label'), 'caption' => __('stats.academy_70_caption')],
+                    ['number' => '9',  'label' => __('stats.academy_9_label'),  'caption' => __('stats.academy_9_caption')],
+                    ['number' => '8',  'label' => __('stats.academy_8b_label'), 'caption' => __('stats.academy_8b_caption')],
+                    ['number' => '8',  'label' => __('stats.academy_8c_label'), 'caption' => __('stats.academy_8c_caption')],
+                    ['number' => '10', 'label' => __('stats.academy_10_label'), 'caption' => __('stats.academy_10_caption')],
+                    ['number' => '3',  'label' => __('stats.academy_3_label'),  'caption' => __('stats.academy_3_caption')],
                 ];
             @endphp
             <div class="grid grid-cols-3 gap-x-6 gap-y-8 md:gap-x-8 md:gap-y-10">

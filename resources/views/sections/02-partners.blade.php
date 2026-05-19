@@ -14,10 +14,10 @@
         {{-- header: title (left) + description (right) --}}
         <div class="grid grid-cols-1 gap-10 lg:grid-cols-[1.55fr_1fr] lg:items-end lg:gap-16">
             <h2 id="partners-title" class="flex flex-col">
-                <span class="text-display-xxl text-[var(--color-display-cream)]">Partner with</span>
+                <span class="text-display-xxl text-[var(--color-display-cream)]">{{ __('titles.partner_with') }}</span>
                 <span class="-mt-2 flex items-baseline gap-4 md:-mt-4">
-                    <span style="font-family: var(--font-italic); font-style: italic;" class="text-[clamp(48px,7vw,120px)] leading-none text-[var(--color-accent-gold)]">the</span>
-                    <span class="text-display-xxl text-[var(--color-display-cream)]">Trusted.</span>
+                    <span style="font-family: var(--font-italic); font-style: italic;" class="text-[clamp(48px,7vw,120px)] leading-none text-[var(--color-accent-gold)]">{{ __('titles.the') }}</span>
+                    <span class="text-display-xxl text-[var(--color-display-cream)]">{{ __('titles.trusted') }}</span>
                 </span>
             </h2>
 

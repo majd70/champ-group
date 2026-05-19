@@ -96,8 +96,8 @@ return [
     */
 
     'available_locales' => [
-        'en' => ['name' => 'English', 'native' => 'EN', 'flag' => '🇬🇧', 'dir' => 'ltr'],
-        // 'ar' => ['name' => 'Arabic',  'native' => 'عربي', 'flag' => '🇸🇦', 'dir' => 'rtl'],
+        'en' => ['name' => 'English', 'native' => 'EN',    'flag' => '🇬🇧', 'dir' => 'ltr'],
+        'ar' => ['name' => 'Arabic',  'native' => 'عربي', 'flag' => '🇸🇦', 'dir' => 'rtl'],
         // 'fr' => ['name' => 'French',  'native' => 'FR',  'flag' => '🇫🇷', 'dir' => 'ltr'],
     ],
 

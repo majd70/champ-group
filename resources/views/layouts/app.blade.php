@@ -14,6 +14,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
+    {{-- RTL/Arabic — load Tajawal which has full Arabic + Latin glyph coverage --}}
+    @if (($localeData['dir'] ?? 'ltr') === 'rtl')
+        <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    @endif
+
     {{-- Alpine.js for the language switcher dropdown (and any future small interactions) --}}
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.5/dist/cdn.min.js"></script>
 

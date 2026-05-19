@@ -17,8 +17,8 @@
                 {{-- title row: Champions HUB + shield --}}
                 <div class="flex items-center gap-8 lg:gap-10">
                     <h2 id="hub-title" class="flex flex-col">
-                        <span style="font-family: var(--font-italic); font-style: italic;" class="text-[clamp(40px,5vw,80px)] leading-[0.95] text-[var(--color-accent-gold)]">Champions</span>
-                        <span class="text-[clamp(80px,11vw,170px)] uppercase leading-[0.88] text-[var(--color-display-cream)]" style="font-family: var(--font-display);">HUB</span>
+                        <span style="font-family: var(--font-italic); font-style: italic;" class="text-[clamp(40px,5vw,80px)] leading-[0.95] text-[var(--color-accent-gold)]">{{ __('titles.champions') }}</span>
+                        <span class="text-[clamp(80px,11vw,170px)] uppercase leading-[0.88] text-[var(--color-display-cream)]" style="font-family: var(--font-display);">{{ __('titles.hub') }}</span>
                     </h2>
                     <img
                         src="{{ asset('images/page-04/shield.png') }}"
@@ -76,12 +76,12 @@
                 <div class="grid grid-cols-3 gap-x-4 gap-y-6 border-y border-[var(--color-divider)] py-6 md:gap-x-6 md:py-8">
                     @php
                         $stats = [
-                            ['number' => 'EDU',  'label' => 'Education + Tech',       'caption' => 'Integrated'],
-                            ['number' => 'CRT',  'label' => 'Partner Certifications', 'caption' => 'Recognized'],
-                            ['number' => 'VID',  'label' => 'Video Analysis Hub',     'caption' => 'Performance'],
-                            ['number' => 'DAT',  'label' => 'Data Analysis Hubs',     'caption' => 'Insights'],
-                            ['number' => '100%', 'label' => 'Digitized Operations',   'caption' => 'End-to-End'],
-                            ['number' => 'PRO',  'label' => 'Grassroots → Pro',       'caption' => 'Full Pipeline'],
+                            ['number' => 'EDU',  'label' => __('stats.hub_edu_label'), 'caption' => __('stats.hub_edu_caption')],
+                            ['number' => 'CRT',  'label' => __('stats.hub_crt_label'), 'caption' => __('stats.hub_crt_caption')],
+                            ['number' => 'VID',  'label' => __('stats.hub_vid_label'), 'caption' => __('stats.hub_vid_caption')],
+                            ['number' => 'DAT',  'label' => __('stats.hub_dat_label'), 'caption' => __('stats.hub_dat_caption')],
+                            ['number' => '100%', 'label' => __('stats.hub_100_label'), 'caption' => __('stats.hub_100_caption')],
+                            ['number' => 'PRO',  'label' => __('stats.hub_pro_label'), 'caption' => __('stats.hub_pro_caption')],
                         ];
                     @endphp
                     @foreach ($stats as $stat)

@@ -35,7 +35,7 @@
                 draggable="false"
             >
             <span class="hidden text-[12px] font-semibold uppercase tracking-[0.18em] text-white sm:inline md:text-[13px]">
-                Champions Group
+                {{ __('brands.group') }}
             </span>
         </a>
 
