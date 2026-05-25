@@ -15,11 +15,11 @@
             <x-eyebrow tone="dim">{{ __('sections.hero_mena') }}</x-eyebrow>
         </div>
 
-        {{-- main split: left content + right olive panel --}}
-        <div class="relative mt-10 grid flex-1 grid-cols-1 gap-10 lg:mt-0 lg:grid-cols-[1.55fr_1fr] lg:gap-0">
+        {{-- main content --}}
+        <div class="relative mt-10 flex flex-1 flex-col lg:mt-0">
 
-            {{-- LEFT: headline, paragraph, stats --}}
-            <div class="flex flex-col justify-between gap-12 lg:pe-12 lg:py-10">
+            {{-- headline, paragraph, stats --}}
+            <div class="flex flex-col justify-between gap-12 lg:py-10">
 
                 {{-- headline --}}
                 <h1 id="hero-title" class="flex flex-col">
@@ -60,41 +60,6 @@
                 </dl>
             </div>
 
-            {{-- RIGHT: shield + vertical rail. Negative top/bottom margins on lg
-                 extend the olive bg vertically without changing horizontal width --}}
-            <div class="relative flex items-center justify-center bg-[var(--color-panel-olive)] py-16 lg:-my-[160px] lg:py-[160px]">
-
-                {{-- faint concentric ring guides, gold tinted --}}
-                <div
-                    aria-hidden="true"
-                    class="pointer-events-none absolute inset-0 opacity-[0.18]"
-                    style="background-image:
-                        radial-gradient(circle at 50% 50%, transparent 0, transparent 26%, rgba(244,184,30,0.45) 26.3%, transparent 27%),
-                        radial-gradient(circle at 50% 50%, transparent 0, transparent 38%, rgba(244,184,30,0.35) 38.3%, transparent 39%),
-                        radial-gradient(circle at 50% 50%, transparent 0, transparent 52%, rgba(244,184,30,0.25) 52.3%, transparent 53%);"
-                ></div>
-
-                {{-- shield (cropped from page-01.png; bg matches panel so it tiles seamlessly) --}}
-                <img
-                    src="{{ asset('images/page-01/shield.png') }}"
-                    alt="Champions Group shield logo"
-                    width="680"
-                    height="920"
-                    class="js-hero-shield relative z-10 h-auto w-[clamp(220px,30vw,420px)] select-none"
-                    draggable="false"
-                >
-
-                {{-- vertical caps rail at right edge --}}
-                <div
-                    aria-hidden="true"
-                    class="js-hero-rail absolute end-2 top-1/2 hidden -translate-y-1/2 lg:block"
-                >
-                    <span
-                        class="text-eyebrow text-[var(--color-accent-gold)]/80 whitespace-nowrap"
-                        style="writing-mode: vertical-rl; transform: rotate(180deg); letter-spacing: 0.55em;"
-                    >Club · Academy · Business · Hub · Egytalhub · Jalaa'</span>
-                </div>
-            </div>
         </div>
 
         {{-- footer strip --}}
