@@ -4,9 +4,18 @@
     'aspectRatio' => 'aspect-[16/9]',
 ])
 
+@php
+    if (! $image && $name) {
+        $file = config('partner_logos')[$name] ?? null;
+        if ($file) {
+            $image = asset('images/demo_logo/' . $file);
+        }
+    }
+@endphp
+
 <div
     {{ $attributes->class([
-        'logo-card group flex items-center justify-center rounded-[4px] border border-white/10 bg-white/[0.04] p-3 transition-all duration-300 hover:scale-[1.03] hover:border-white/25 hover:bg-white/[0.06]',
+        'logo-card group flex items-center justify-center rounded-[4px] border border-white/10 bg-white/[0.04] p-0.5 transition-all duration-300 hover:scale-[1.03] hover:border-white/25 hover:bg-white/[0.06]',
         $aspectRatio,
     ]) }}
     @if ($name) title="{{ $name }}" @endif
@@ -15,7 +24,7 @@
         <img
             src="{{ $image }}"
             alt="{{ $name ?? '' }}"
-            class="max-h-[60%] max-w-[70%] object-contain"
+            class="h-full w-full object-contain"
             loading="lazy"
             decoding="async"
             draggable="false"
