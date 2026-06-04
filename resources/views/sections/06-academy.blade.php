@@ -99,9 +99,16 @@
                         @endforeach
                     </div>
 
-                    {{-- social --}}
+                    {{-- social — academy has its own TikTok, shares Group main for the rest --}}
                     <div class="mt-2">
-                        <x-social-icons :label="__('sections.follow_us')" />
+                        <x-social-icons
+                            :label="__('sections.follow_us')"
+                            :links="[
+                                ['platform' => 'facebook',  'href' => 'https://www.facebook.com/share/1BdGtciKLt/'],
+                                ['platform' => 'instagram', 'href' => 'https://www.instagram.com/champions_ps'],
+                                ['platform' => 'tiktok',    'href' => 'https://www.tiktok.com/@champions_academy'],
+                            ]"
+                        />
                     </div>
                 </div>
 

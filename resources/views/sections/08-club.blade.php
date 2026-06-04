@@ -113,7 +113,15 @@
 
                     {{-- social --}}
                     <div class="mt-2">
-                        <x-social-icons :label="__('sections.follow_us')" />
+                        <x-social-icons
+                            :label="__('sections.follow_us')"
+                            :links="[
+                                ['platform' => 'facebook',  'href' => 'https://www.facebook.com/share/1BXqP5cqv1/'],
+                                ['platform' => 'instagram', 'href' => 'https://www.instagram.com/champions.club.ps'],
+                                ['platform' => 'youtube',   'href' => 'https://youtube.com/@championsclubgaza'],
+                                ['platform' => 'tiktok',    'href' => 'https://www.tiktok.com/@champions.club.ps'],
+                            ]"
+                        />
                     </div>
                 </div>
 
