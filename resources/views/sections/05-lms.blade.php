@@ -180,6 +180,11 @@
             @endforeach
         </div>
 
+        {{-- social --}}
+        <div class="mt-2 flex justify-center border-t border-[var(--color-divider)] pt-10">
+            <x-social-icons :label="__('sections.follow_us')" align="center" />
+        </div>
+
         {{-- footer --}}
         <x-page-footer index="05" total="12" :label="__('sections.footer_05')" />
     </div>

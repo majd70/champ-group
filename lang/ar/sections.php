@@ -79,6 +79,9 @@ return [
     'ambitions'              => 'الطموحات:',
     'ambitions_text'         => 'الفوز بالدوري الفلسطيني والمنافسة دولياً.',
 
+    /* Social icons */
+    'follow_us'              => 'تابعونا',
+
     /* Section footers */
     'footer_01'              => 'مجموعة تشامبيونز · الغلاف',
     'footer_02'              => 'مجموعة تشامبيونز · الشراكات',

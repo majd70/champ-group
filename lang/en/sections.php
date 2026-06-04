@@ -79,6 +79,9 @@ return [
     'ambitions'              => 'Ambitions:',
     'ambitions_text'         => 'Win the Palestinian league and compete internationally.',
 
+    /* Social icons */
+    'follow_us'              => 'Follow Us',
+
     /* Section footers */
     'footer_01'              => 'Champions Group · Cover',
     'footer_02'              => 'Champions Group · Partnerships',

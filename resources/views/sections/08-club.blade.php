@@ -110,6 +110,11 @@
                     <span class="self-end text-[clamp(12px,1vw,16px)] leading-[1.3] text-[var(--color-accent-gold)]" style="font-family: var(--font-italic); font-style: italic;">
                         {{ __('sections.more_partners') }}
                     </span>
+
+                    {{-- social --}}
+                    <div class="mt-2">
+                        <x-social-icons :label="__('sections.follow_us')" />
+                    </div>
                 </div>
 
                 <x-page-footer index="08" total="12" :label="__('sections.footer_08')" />
