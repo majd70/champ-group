@@ -100,7 +100,7 @@
                     </div>
                 </div>
 
-                <x-page-footer index="06" total="12" label="Academy · 9 Sports" />
+                <x-page-footer index="06" total="12" :label="__('sections.footer_06')" />
             </div>
         </div>
     </div>

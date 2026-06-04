@@ -101,6 +101,6 @@
         </div>
 
         {{-- footer --}}
-        <x-page-footer index="02" total="12" label="Champions Group · Partnerships" />
+        <x-page-footer index="02" total="12" :label="__('sections.footer_02')" />
     </div>
 </section>

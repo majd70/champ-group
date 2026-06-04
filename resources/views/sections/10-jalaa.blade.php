@@ -62,15 +62,50 @@
         {{-- RIGHT COLUMN --}}
         <div class="flex flex-col gap-10 lg:gap-0 lg:border-s lg:border-[var(--color-divider)] lg:ps-12">
 
-            {{-- 2x2 photos collage --}}
-            <img
-                src="{{ asset('images/page-10/photos.jpg') }}"
-                alt="Al Jalaa football teams in orange jerseys: current squad, beach football team, vintage team photo, and celebration photo"
-                width="1320"
-                height="800"
-                class="block w-full select-none"
-                draggable="false"
-            >
+            {{-- 2x2 photo mosaic — placeholder images (swap with real cropped photos later) --}}
+            @php
+                $tiles = [
+                    ['src' => 'https://picsum.photos/seed/jalaa-founding/900/700',  'year' => '1992',     'label' => 'Founding Squad'],
+                    ['src' => 'https://picsum.photos/seed/jalaa-acquired/900/700',  'year' => '2022',     'label' => 'Acquisition Era'],
+                    ['src' => 'https://picsum.photos/seed/jalaa-heritage/900/700',  'year' => 'Heritage', 'label' => 'Generations of Jalaa'],
+                    ['src' => 'https://picsum.photos/seed/jalaa-today/900/700',     'year' => '2024',     'label' => 'Today · Active Squad'],
+                ];
+            @endphp
+            <div class="jalaa-mosaic" data-gallery-root="jalaa-photos">
+                <div class="grid grid-cols-2 gap-2 md:gap-3">
+                    @foreach ($tiles as $i => $tile)
+                        <button
+                            type="button"
+                            data-gallery-item
+                            data-index="{{ $i }}"
+                            data-src="{{ $tile['src'] }}"
+                            data-title="Al Jalaa · {{ $tile['label'] }}"
+                            data-year="{{ $tile['year'] }}"
+                            class="jalaa-tile group relative aspect-[4/3] overflow-hidden rounded-xl border border-white/10 transition-all duration-500 hover:border-[var(--color-accent-gold)]/45 hover:shadow-[0_18px_50px_-15px_rgba(244,184,30,0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent-gold)]"
+                            style="animation-delay: {{ $i * 0.12 }}s;"
+                            aria-label="View photo: {{ $tile['label'] }}"
+                        >
+                            <img
+                                src="{{ $tile['src'] }}"
+                                alt="{{ $tile['label'] }}"
+                                loading="lazy"
+                                decoding="async"
+                                draggable="false"
+                                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                            >
+
+                            {{-- bottom gradient + year badge on hover --}}
+                            <span aria-hidden="true" class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent"></span>
+                            <span class="pointer-events-none absolute inset-x-3 bottom-3 flex translate-y-2 items-center justify-between opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                                <span class="rounded-full border border-white/20 bg-black/40 px-2.5 py-1 text-[10px] uppercase tracking-[0.2em] text-[var(--color-accent-gold)] backdrop-blur-md">
+                                    {{ $tile['year'] }}
+                                </span>
+                                <span class="text-[11px] font-medium text-white/90">{{ $tile['label'] }}</span>
+                            </span>
+                        </button>
+                    @endforeach
+                </div>
+            </div>
 
             {{-- 6-stat grid + footer pushed to bottom of column --}}
             @php
@@ -94,7 +129,7 @@
                     @endforeach
                 </div>
 
-                <x-page-footer index="10" total="12" label="Al Jalaa · Gaza Venture" />
+                <x-page-footer index="10" total="12" :label="__('sections.footer_10')" />
             </div>
         </div>
     </div>

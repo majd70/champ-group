@@ -35,5 +35,9 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="{{ asset('js/animations.js') }}"></script>
+    <script src="{{ asset('js/gallery-lightbox.js') }}"></script>
+    <script src="{{ asset('js/showcase.js') }}"></script>
+    <script src="{{ asset('js/sticky-story.js') }}"></script>
+    <script src="{{ asset('js/coverflow.js') }}"></script>
 </body>
 </html>

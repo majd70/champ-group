@@ -34,6 +34,6 @@
         </div>
 
         {{-- footer --}}
-        <x-page-footer index="03" total="12" label="Champions Group · Our Services" />
+        <x-page-footer index="03" total="12" :label="__('sections.footer_03')" />
     </div>
 </section>

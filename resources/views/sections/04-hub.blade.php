@@ -62,15 +62,93 @@
             {{-- RIGHT COLUMN: screenshots + stats + partners --}}
             <div class="flex flex-col gap-8">
 
-                {{-- 3 product screenshots (cropped composition) --}}
-                <img
-                    src="{{ asset('images/page-04/screens.png') }}"
-                    alt="Champions Hub platform: homepage, course catalog, and category browser"
-                    width="1430"
-                    height="730"
-                    class="block w-full select-none"
-                    draggable="false"
-                >
+                {{-- 3 product screenshots — tilted/stacked browser cards with hover lift + lightbox --}}
+                @php
+                    $screens = [
+                        ['src' => 'https://picsum.photos/seed/hub-home/1200/750',     'label' => 'Hub Homepage',  'url' => 'hub.champions.group'],
+                        ['src' => 'https://picsum.photos/seed/hub-courses/1200/750',  'label' => 'Course Catalog', 'url' => 'hub.champions.group/courses'],
+                        ['src' => 'https://picsum.photos/seed/hub-cats/1200/750',     'label' => 'Categories',     'url' => 'hub.champions.group/categories'],
+                    ];
+                @endphp
+                <div class="hub-screens relative w-full" data-gallery-root="hub-screens">
+                    {{-- mobile fallback: simple stacked column. Desktop: absolutely-positioned tilted cards. --}}
+                    <div class="flex flex-col gap-4 lg:hidden">
+                        @foreach ($screens as $i => $s)
+                            <button
+                                type="button"
+                                data-gallery-item
+                                data-src="{{ $s['src'] }}"
+                                data-title="Champions Hub · {{ $s['label'] }}"
+                                class="group relative w-full overflow-hidden rounded-xl border border-white/10 bg-[var(--color-surface-navy)]/50 transition-all duration-500 hover:border-[var(--color-accent-gold)]/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent-gold)]"
+                            >
+                                <div class="flex items-center gap-2 border-b border-white/10 bg-white/[0.04] px-3 py-2">
+                                    <span class="block h-2 w-2 rounded-full bg-[#ff5f56]"></span>
+                                    <span class="block h-2 w-2 rounded-full bg-[#ffbd2e]"></span>
+                                    <span class="block h-2 w-2 rounded-full bg-[#27c93f]"></span>
+                                    <span class="ms-2 truncate text-[10px] tracking-[0.06em] text-white/40">{{ $s['url'] }}</span>
+                                </div>
+                                <div class="aspect-[16/10] w-full">
+                                    <img src="{{ $s['src'] }}" alt="{{ $s['label'] }}" loading="lazy" decoding="async" draggable="false" class="h-full w-full object-cover">
+                                </div>
+                            </button>
+                        @endforeach
+                    </div>
+
+                    <div class="relative hidden aspect-[16/11] w-full lg:block">
+                        @foreach ($screens as $i => $s)
+                            @php
+                                // Match original screens.png composition exactly:
+                                //  0 = main large card (back-left)
+                                //  1 = small dashboard card (front, upper-right)
+                                //  2 = small categories card (front, lower-right)
+                                $positions = [
+                                    ['top' => '6%',  'left' => '0%',    'width' => '72%', 'z' => 10, 'delay' => 0.0],
+                                    ['top' => '0%',  'right' => '0%',   'width' => '40%', 'z' => 20, 'delay' => 0.15],
+                                    ['top' => '52%', 'right' => '4%',   'width' => '48%', 'z' => 20, 'delay' => 0.3],
+                                ];
+                                $p = $positions[$i];
+                            @endphp
+                            <button
+                                type="button"
+                                data-gallery-item
+                                data-src="{{ $s['src'] }}"
+                                data-title="Champions Hub · {{ $s['label'] }}"
+                                class="hub-screen-card group absolute overflow-hidden rounded-xl border border-white/10 bg-[var(--color-surface-navy)]/70 shadow-[0_25px_60px_-25px_rgba(0,0,0,0.7)] backdrop-blur-md transition-all duration-500 hover:z-30 hover:scale-[1.03] hover:border-[var(--color-accent-gold)]/45 hover:shadow-[0_30px_80px_-20px_rgba(244,184,30,0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent-gold)]"
+                                style="
+                                    top: {{ $p['top'] }};
+                                    {{ isset($p['left'])  ? 'left: '  . $p['left']  . ';' : '' }}
+                                    {{ isset($p['right']) ? 'right: ' . $p['right'] . ';' : '' }}
+                                    width: {{ $p['width'] }};
+                                    z-index: {{ $p['z'] }};
+                                    transform-origin: center center;
+                                    animation: hub-screen-in 0.9s cubic-bezier(0.22,1,0.36,1) both;
+                                    animation-delay: {{ $p['delay'] }}s;
+                                "
+                                aria-label="View screenshot: {{ $s['label'] }}"
+                            >
+                                <div class="flex items-center gap-2 border-b border-white/10 bg-white/[0.04] px-3 py-2">
+                                    <span class="block h-2 w-2 rounded-full bg-[#ff5f56]"></span>
+                                    <span class="block h-2 w-2 rounded-full bg-[#ffbd2e]"></span>
+                                    <span class="block h-2 w-2 rounded-full bg-[#27c93f]"></span>
+                                    <span class="ms-2 truncate text-[10px] tracking-[0.06em] text-white/40">{{ $s['url'] }}</span>
+                                </div>
+                                <div class="aspect-[16/10] w-full overflow-hidden">
+                                    <img
+                                        src="{{ $s['src'] }}"
+                                        alt="{{ $s['label'] }}"
+                                        loading="lazy"
+                                        decoding="async"
+                                        draggable="false"
+                                        class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                                    >
+                                </div>
+                                <span class="pointer-events-none absolute inset-x-3 bottom-3 translate-y-2 rounded-full border border-white/15 bg-black/45 px-3 py-1 text-center text-[10px] uppercase tracking-[0.18em] text-[var(--color-accent-gold)] opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                                    {{ $s['label'] }}
+                                </span>
+                            </button>
+                        @endforeach
+                    </div>
+                </div>
 
                 {{-- 6-stat grid: 2 rows × 3 cols (EDU/CRT/VID | DAT/100%/PRO) --}}
                 <div class="grid grid-cols-3 gap-x-4 gap-y-6 border-y border-[var(--color-divider)] py-6 md:gap-x-6 md:py-8">
@@ -115,6 +193,6 @@
         </div>
 
         {{-- footer --}}
-        <x-page-footer index="04" total="12" label="Champions Group · Hub · Education + Technology" />
+        <x-page-footer index="04" total="12" :label="__('sections.footer_04')" />
     </div>
 </section>

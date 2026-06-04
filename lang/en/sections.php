@@ -47,6 +47,21 @@ return [
     'players_breakdown'      => 'Players · 5,600 Male · 2,400 Female',
     'academy_extra'          => 'Plus 6 basketball cups · 8 table tennis cups · 1 player active in Spain.',
 
+    /* Page 07 — Achievements Showcase */
+    'achievements_eyebrow'      => 'Champions Group · Press & Achievements',
+    'achievements_title'        => 'Our Achievements',
+    'achievements_subtitle'     => 'Moments that define our journey and success — across tournaments, partnerships, and the press.',
+    'achievements_a11y'         => 'Champions Group achievements showcase — tournaments, ceremonies, team photos, and press coverage.',
+    'achievements_badge'        => 'Achievement',
+    'achievements_cta'          => 'View Achievement',
+
+    /* Page 09 — Events Showcase */
+    'events_gallery_eyebrow'    => 'Champions Group · Events & Activities',
+    'events_gallery_title'      => 'Events & Activities',
+    'events_gallery_subtitle'   => 'Community gatherings, ceremonies, and venues that bring our mission to life.',
+    'events_gallery_a11y'       => 'Champions Group events showcase — gatherings, performances, and venue shots.',
+    'events_gallery_badge'      => 'Featured Event',
+
     /* Page 08 — Club */
     'club_eyebrow'           => 'Champions Group · 2018 · 2023',
     'club_description'       => 'A 24,000 m² sanctuary founded in 2018 as the first family club of its kind in Palestine — offering diverse activities spanning sports, social, and cultural engagement, with fully digitized operations. The club was completely destroyed in the October 2023 war.',
@@ -63,6 +78,19 @@ return [
     'year_founded_div'       => 'Year Founded · Palestinian Second Division',
     'ambitions'              => 'Ambitions:',
     'ambitions_text'         => 'Win the Palestinian league and compete internationally.',
+
+    /* Section footers */
+    'footer_01'              => 'Champions Group · Cover',
+    'footer_02'              => 'Champions Group · Partnerships',
+    'footer_03'              => 'Champions Group · Our Services',
+    'footer_04'              => 'Champions Group · Hub · Education + Technology',
+    'footer_05'              => 'Champions LMS · Learning Platform',
+    'footer_06'              => 'Academy · 9 Sports',
+    'footer_07'              => 'Champions Group · Press & Achievements',
+    'footer_08'              => 'Club · Family Sanctuary',
+    'footer_09'              => 'Champions Group · Events & Activities',
+    'footer_10'              => 'Al Jalaa · Gaza Venture',
+    'footer_11'              => 'Egytalhub · Talent Bridge',
 
     /* Page 11 — EgytalHub */
     'egytal_eyebrow'         => 'Champions Group · Talent & LD Services',

@@ -112,7 +112,7 @@
                     </span>
                 </div>
 
-                <x-page-footer index="08" total="12" label="Club · Family Sanctuary" />
+                <x-page-footer index="08" total="12" :label="__('sections.footer_08')" />
             </div>
         </div>
     </div>

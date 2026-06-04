@@ -82,7 +82,7 @@
                     @endforeach
                 </div>
 
-                <x-page-footer index="11" total="12" label="Egytalhub · Talent Bridge" />
+                <x-page-footer index="11" total="12" :label="__('sections.footer_11')" />
             </div>
         </div>
     </div>
