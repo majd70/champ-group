@@ -27,10 +27,10 @@
         {{-- Logo --}}
         <a href="#page-01" class="flex shrink-0 items-center gap-3" aria-label="Champions Group — home">
             <img
-                src="{{ asset('images/page-01/shield.png') }}"
+                src="{{ asset('images/page-01/shield-nav.png') }}"
                 alt=""
                 width="680"
-                height="920"
+                height="662"
                 class="block h-8 w-auto select-none md:h-10"
                 draggable="false"
             >

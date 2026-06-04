@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p public/images/demo_logo && cp demo_logo/*.png public/images/demo_logo/ && ls public/images/demo_logo/ | wc -l)"
+    ],
+    "additionalDirectories": [
+      "C:\\xampp-php8.2-new\\htdocs\\Egital\\champions-group\\demo_logo"
+    ]
+  }
+}
