@@ -191,7 +191,16 @@
 
                     {{-- social --}}
                     <div class="mt-2">
-                        <x-social-icons :label="__('sections.follow_us')" />
+                        <x-social-icons
+                            :label="__('sections.follow_us')"
+                            :links="[
+                                ['platform' => 'facebook',  'href' => 'https://www.facebook.com/share/1BfbAzUaHi/'],
+                                ['platform' => 'instagram', 'href' => 'https://www.instagram.com/championshub_'],
+                                ['platform' => 'linkedin',  'href' => 'https://www.linkedin.com/company/champions-hub/'],
+                                ['platform' => 'twitter',   'href' => 'https://x.com/ChampionsHUB_'],
+                                ['platform' => 'tiktok',    'href' => 'https://www.tiktok.com/@championshub_1'],
+                            ]"
+                        />
                     </div>
                 </div>
             </div>

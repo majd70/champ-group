@@ -129,9 +129,6 @@
                     @endforeach
                 </div>
 
-                {{-- social --}}
-                <x-social-icons :label="__('sections.follow_us')" />
-
                 <x-page-footer index="10" total="12" :label="__('sections.footer_10')" />
             </div>
         </div>

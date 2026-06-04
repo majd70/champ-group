@@ -83,7 +83,14 @@
                 </div>
 
                 {{-- social --}}
-                <x-social-icons :label="__('sections.follow_us')" />
+                <x-social-icons
+                    :label="__('sections.follow_us')"
+                    :links="[
+                        ['platform' => 'facebook',  'href' => 'https://www.facebook.com/share/1brUMZMnTo/'],
+                        ['platform' => 'instagram', 'href' => 'https://www.instagram.com/egytalhub'],
+                        ['platform' => 'linkedin',  'href' => 'https://www.linkedin.com/company/egytalhub/'],
+                    ]"
+                />
 
                 <x-page-footer index="11" total="12" :label="__('sections.footer_11')" />
             </div>
