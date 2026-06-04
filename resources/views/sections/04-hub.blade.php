@@ -188,6 +188,11 @@
                             <x-logo-card name="{{ $partner }}" />
                         @endforeach
                     </div>
+
+                    {{-- social --}}
+                    <div class="mt-2">
+                        <x-social-icons :label="__('sections.follow_us')" />
+                    </div>
                 </div>
             </div>
         </div>

@@ -98,6 +98,11 @@
                             <x-logo-card name="{{ $partner }}" />
                         @endforeach
                     </div>
+
+                    {{-- social --}}
+                    <div class="mt-2">
+                        <x-social-icons :label="__('sections.follow_us')" />
+                    </div>
                 </div>
 
                 <x-page-footer index="06" total="12" :label="__('sections.footer_06')" />
