@@ -39,5 +39,6 @@
     <script src="{{ asset('js/showcase.js') }}"></script>
     <script src="{{ asset('js/sticky-story.js') }}"></script>
     <script src="{{ asset('js/coverflow.js') }}"></script>
+    <script src="{{ asset('js/stories.js') }}"></script>
 </body>
 </html>

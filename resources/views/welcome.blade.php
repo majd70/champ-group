@@ -4,6 +4,7 @@
 @section('description', 'Champions Group is a diversified sports ecosystem advancing the sports sector in MENA since 2015 — education, technology, consulting, events, and community sports services.')
 
 @section('content')
+    <x-stories.tray />
     @include('sections.01-hero')
     @include('sections.02-partners')
     @include('sections.03-services')
