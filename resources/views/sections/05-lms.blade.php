@@ -155,7 +155,7 @@
                 <p class="max-w-[42ch] text-[14px] leading-[1.7] text-[var(--color-text-muted)] md:text-[15px]">
                     {{ __('sections.lms_description') }}
                 </p>
-                <x-visit-button class="mt-5 lg:mt-0" />
+                <x-visit-button href="https://champions-lms.com/" target="_blank" rel="noopener noreferrer" class="mt-5 lg:mt-0" />
             </div>
         </div>
 
