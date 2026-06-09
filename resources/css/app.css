@@ -606,6 +606,11 @@
         position: relative;
         width: 100%;
         overflow: hidden;
+        /* Force LTR on the scroll container too: in RTL a max-content track
+           anchors to the right edge and overflows left, pushing the second
+           row (starts at -50%) out of view. LTR anchors it left like English.
+           Cascades to .marquee-track. */
+        direction: ltr;
         /* edge fade for premium feel */
         -webkit-mask-image: linear-gradient(to right, transparent 0, black 8%, black 92%, transparent 100%);
                 mask-image: linear-gradient(to right, transparent 0, black 8%, black 92%, transparent 100%);
@@ -615,6 +620,9 @@
         gap: 16px;
         width: max-content;
         will-change: transform;
+        /* images have no reading order — force LTR so the seamless loop math
+           is identical in RTL (Arabic) and LTR (English). */
+        direction: ltr;
     }
     .marquee-track--left  { animation: marquee-left  var(--marquee-speed, 60s) linear infinite; }
     .marquee-track--right { animation: marquee-right var(--marquee-speed, 60s) linear infinite; }
@@ -737,6 +745,8 @@
         scroll-snap-type: x proximity;
         min-height: 116px; /* reserve height — avoid layout shift before fonts/imgs */
         -webkit-overflow-scrolling: touch;
+        /* center the row when it fits; fall back to scrollable start on overflow */
+        justify-content: safe center;
     }
     .stories-tray::-webkit-scrollbar { display: none; }
     .stories-tray > li { scroll-snap-align: start; }

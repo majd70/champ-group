@@ -22,7 +22,7 @@
             </p>
 
             {{-- CTA --}}
-            <x-visit-button />
+            <x-visit-button href="https://egytalhub.com/" target="_blank" rel="noopener noreferrer" />
 
             {{-- horizontal divider --}}
             <hr class="border-0 border-t border-[var(--color-divider)]">

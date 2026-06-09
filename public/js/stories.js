@@ -315,6 +315,11 @@
             a.href = slide.cta.url || '#';
             a.textContent = slide.cta.label;
             a.setAttribute('data-stories-cta', '');
+            // external links open in a new tab so the site stays open behind the story
+            if (/^(https?:)?\/\//i.test(a.getAttribute('href'))) {
+                a.target = '_blank';
+                a.rel = 'noopener noreferrer';
+            }
             a.addEventListener('click', function () { self.close(); });
             content.appendChild(a);
             // reveal CTA after the last block's reveal finishes
