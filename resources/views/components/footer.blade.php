@@ -36,10 +36,10 @@
             <div class="flex flex-col gap-5">
                 <a href="#page-01" class="inline-flex items-center gap-3" aria-label="Champions Group — home">
                     <img
-                        src="{{ asset('images/page-01/shield.png') }}"
+                        src="{{ asset('images/page-01/shield-nav.png') }}"
                         alt=""
                         width="680"
-                        height="920"
+                        height="662"
                         class="block h-12 w-auto select-none"
                         draggable="false"
                     >
