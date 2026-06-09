@@ -737,6 +737,8 @@
         scroll-snap-type: x proximity;
         min-height: 116px; /* reserve height — avoid layout shift before fonts/imgs */
         -webkit-overflow-scrolling: touch;
+        /* center the row when it fits; fall back to scrollable start on overflow */
+        justify-content: safe center;
     }
     .stories-tray::-webkit-scrollbar { display: none; }
     .stories-tray > li { scroll-snap-align: start; }
